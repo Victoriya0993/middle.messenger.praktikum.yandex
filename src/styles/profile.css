@@ -1,0 +1,105 @@
+.back {
+  height: 100%;
+  width: 64px;
+  border: 1px #eaeaea;
+  border-right-style: solid;
+  display: flex;
+}
+
+.back_icon {
+    margin: auto;
+    height: 28px;
+    width: 28px;
+
+}
+
+.profile_content {
+  flex: 1;
+  display: flex;
+}
+
+.content_card {
+    margin: auto;
+    width: 510px;
+    display: flex;
+    flex-flow: column;
+}
+
+.card_title{
+  text-align: center;  
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;  
+  color: #1E1E1E;
+  font-size: 16px;
+  margin-top: 21px;
+  margin-bottom: 60px;
+}
+
+.card_field{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row;
+    border: 1px #EAEAEA;
+    border-bottom-style: solid;
+    height: 27px;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.card_field_name {
+    text-align: left;  
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;  
+    color: #1E1E1E;
+    font-size: 13px;
+}
+
+.card_field_value {
+    text-align: right;  
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;  
+    color: #999999;
+    font-size: 13px;
+    border: 0px;
+}
+
+.avatar {
+    margin: auto;
+    width: 130px;
+    height: 130px;
+}
+
+.card_footer{
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column;
+}
+
+.footer_button {
+    width: 100%;
+    border: 1px #EAEAEA;
+    border-bottom-style: solid;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    /* text-align: center; */
+  }
+  
+  .button__active {
+    background: #ffffff;
+    color: #3369f3;
+    height: 37px;
+    font-size: 13px;
+    line-height: 37px;
+  }
+  
+  .button__red {
+    background: #ffffff;
+    color: #FF0000;
+    font-size: 13px;
+    line-height: 37px;
+  }
