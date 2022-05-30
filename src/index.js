@@ -7,4 +7,4 @@ app.use(express.static(__dirname + "/../dist/"));
 
 app.listen(PORT, function () {
   console.log(`Приложение запущено на порту ${PORT}!`);
-}); 
+});  
