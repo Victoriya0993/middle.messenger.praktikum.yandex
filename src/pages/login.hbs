@@ -1,0 +1,26 @@
+---
+title: Login
+css:
+  - base.css
+  - block.css
+---
+
+{{!< base}}
+
+<main class="layout">
+    <div class="block">
+        {{> title class="block_title" text="Вход"}}
+        <div class="block_body">
+            {{> input text="Логин" type="text" name="login" class="block_input"}}
+            {{> input text="Пароль" type="password" name="password" class="block_input"}}
+        </div>
+        <div class="block_footer">
+            <a href="./chats.hbs" class="text">
+                {{> button class="block_button button__active" name="Sign in" text="Авторизация"}}
+            </a>
+            <a href="./signup.hbs" class="text">
+                {{> button class="block_button button__default" name="Sign up" text="Нет аккаунта?"}}
+            </a>
+        </div>
+    </div>
+</main>

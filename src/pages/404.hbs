@@ -1,0 +1,19 @@
+---
+title: 404
+css:
+  - base.css
+  - error.css
+  - block.css
+---
+
+{{!< base}}
+
+<main class="layout">
+    <div class="error">
+        {{> title class="error_name" text="404"}}
+        {{> title class="error_comment" text="Не туда попали"}}   
+        <a href="./index.hbs" class="text">
+            {{> button class="block_button button__default" text="Назад к чатам"}}
+        </a>       
+    </div>
+</main>

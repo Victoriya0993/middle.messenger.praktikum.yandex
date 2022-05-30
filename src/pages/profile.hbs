@@ -1,0 +1,46 @@
+---
+title: Profile
+css:
+  - base.css
+  - profile.css
+---
+
+{{!< base}}
+
+<main class="layout">
+    <a href="./chats.hbs"class="back">
+        <img src="../static/icon.png" class="back_icon"/></a>
+    </a>
+    <div class="profile_content">
+       <div class="content_card">
+           <a href="" name="avatar" class="avatar"><img src="../static/avatar.png" class="avatar"></a>
+           {{> title class="card_title" text="Иван"}}
+           <div class="card_field">
+                <label class="card_field_name">Почта</label>
+                {{> input text="pochta@yandex.ru" type="text" name="email" class="card_field_value"}}
+           </div>           
+           <div class="card_field">
+                <label class="card_field_name">Логин</label>
+                {{> input text="ivanivanov" type="text" name="login" class="card_field_value"}}
+           </div>           
+           <div class="card_field">
+                <label class="card_field_name">Имя</label>
+                {{> input text="Иван" type="text" name="first_name" class="card_field_value"}}
+           </div>                     
+           <div class="card_field">
+                <label class="card_field_name">Фамилия</label>
+                {{> input text="Иванов" type="text" name="second_name" class="card_field_value"}}
+           </div>                    
+           <div class="card_field">
+                <label class="card_field_name">Телефон</label>
+                {{> input text="+7(909)9673030" type="text" name="phone" class="card_field_value"}}
+           </div>
+                              
+           <div class="card_footer">
+                {{> button text="Изменить данные" name="change_data" class="footer_button button__active"}}
+                {{> button text="Изменить пароль" name="change_password" class="footer_button button__active"}}
+                {{> button text="Выйти" name="exit" class="footer_button button__red"}}
+           </div>
+       </div>
+    </div>
+</main>
