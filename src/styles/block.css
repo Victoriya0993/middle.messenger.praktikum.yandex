@@ -1,71 +1,82 @@
 /* Обычный */
 @font-face {
-    font-family: "Inter";
-    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap");
-  }
-  
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap");
+}
+
+:root {
+  --main-bg-color: #ffffff;
+  --primary-color: #3369f3;
+  --second-color: #ffffff;
+  --main-text-color: #1e1e1e;
+}
+
 .block {
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    width: 340px;
-    min-height: 450px;
-    background: #ffffff;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    border-radius: 12px;
-    display: flex;
-    flex-flow: column;
-  }
-  
-  .block_title {
-    text-align: center;
-    padding-top: 50px;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-    color: #1e1e1e;
-  }
-  
-  .block_body {
-    flex: 1;
-    display: flex;
-    flex-flow: column;
-    margin-bottom: 30px;
-    /* height: 1000px; */
-  }
-  
-  .block_footer {
-    padding-bottom: 30px;
-  }
-  
-  .block_button {
-    margin: auto;
-    text-align: center;
-    width: 280px;
-    border-radius: 8px;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-  }
-  
-  .button__active {
-    background: #3369f3;
-    color: #ffffff;
-    height: 37px;
-    font-size: 13px;
-    line-height: 37px;
-  }
-  
-  .button__default {
-    background: #ffffff;
-    color: #3369f3;
-    font-size: 11px;
-    margin-top: 14px;
-  }
-  
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 340px;
+  min-height: 450px;
+  background: var(--main-bg-color);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  display: flex;
+  flex-flow: column;
+}
+
+.block_title {
+  text-align: center;
+  padding-top: 50px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--main-text-color);
+}
+
+.block_body {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 30px;
+}
+
+.block_footer {
+  padding-bottom: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.block_button {
+  margin: 0px auto;
+  width: 280px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button__active {
+  background: var(--primary-color);
+  color: var(--second-color);
+  height: 37px;
+  font-size: 13px;
+  line-height: 37px;  
+  border: 0px;
+}
+
+.button__default {
+  background: var(--second-color);
+  color: var(--primary-color);
+  font-size: 11px;
+  margin-top: 14px;
+}
+
 .text:active,
 .text:hover,
 .text {
@@ -73,17 +84,13 @@
   color: #666;
 }
 
-  .block_input {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    /* padding-top: 20px; */
-    color: black;
-    height: 27px;
-    width: 280px;
-    border: 1px #3369f3;
-    border-bottom-style: solid;
-  }
-  
-
-  
+.block_input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  color: var(--main-text-color);
+  height: 27px;
+  width: 280px;
+  border: 1px var(--primary-color);
+  border-bottom-style: solid;
+}

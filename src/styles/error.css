@@ -3,6 +3,9 @@
   font-family: "Inter";
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap");
 }
+:root {
+  --primary-text-color: #1e1e1e;
+}
 
 .error {
   margin: auto;
@@ -17,7 +20,7 @@
   font-weight: bold;
   font-size: 40px;
   line-height: 40px;
-  color: #1e1e1e;
+  color: var(--primary-text-color);
 }
 
 .error_comment {
@@ -27,7 +30,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: #1e1e1e;
+  color: var(--primary-text-color);
   padding-top: 20px;
   padding-bottom: 70px;
 }

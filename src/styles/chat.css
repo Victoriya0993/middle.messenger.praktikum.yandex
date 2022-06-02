@@ -4,6 +4,12 @@
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap");
 }
 
+:root {
+  --main-bg-color: #ffffff;
+  --second-color: #ffffff;
+  --second-text-color: #999999;
+}
+
 .chats_navigation {
   width: 310px;
   height: 100%;
@@ -26,11 +32,13 @@
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
 }
 
 .profile_button__default {
-  background: #ffffff;
-  color: #999999;
+  background: var(--second-color);
+  color: var(--second-text-color);
   font-size: 12px;
   margin-top: 21px;
 }
@@ -53,8 +61,7 @@
 }
 
 .search_text {
-  color: #999999;
-  /* height: 37px; */
+  color: var(--second-text-color);
   height: 32px;
   font-size: 12px;
   line-height: 32px;
@@ -62,7 +69,6 @@
 
 .navigation_list {
   margin: auto;
-  /* flex: 1; */
 }
 
 .chats_content {
@@ -78,7 +84,7 @@
 
 .content_text__default {
   margin: auto;
-  color: #999999;
+  color: var(--second-text-color);
   height: 12px;
   font-size: 12px;
   line-height: 12px;

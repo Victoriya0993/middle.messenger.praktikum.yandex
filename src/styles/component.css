@@ -1,10 +1,9 @@
+
 .list_component {
   width: 100%;
   padding: 10px auto;
   border: 1px #eaeaea;
   border-top-style: solid;
-  /* display: flex;
-  flex-flow: row; */
 }
 
 .component {
