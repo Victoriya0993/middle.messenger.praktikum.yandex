@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  /* align-items: center; */
+}

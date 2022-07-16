@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      "outDir": "dist",
+      "target": "es2017",
+      "declaration": false,
+      "module": "commonjs",
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "strictNullChecks": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node"
+  },
+  "include": ["src", "index.d.ts"]
+}
