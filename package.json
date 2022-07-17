@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "start": "parcel src/index.html -p 3000 --open",
     "lint": "eslint -- './src/{**/*,*}.{ts,js,json}'",
