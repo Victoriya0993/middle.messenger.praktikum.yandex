@@ -62,7 +62,9 @@ export class ProfilePage extends Block {
 
     return `
     <div class="layout">
+    <a  href="chats" class="text"> 
       <img src=${back} class="back_icon"/>
+      </a>
       <div class="profile_content">
         <div class="content_card">
             <a name="avatar" class="avatar"><img src=${avatar} class="avatar"></a>
@@ -92,7 +94,9 @@ export class ProfilePage extends Block {
                   {{{ Button text="Сохранить" name="save" className="save_button ${buttonClass.buttonSave}" onClick=save}}}
                   {{{ Button text="Изменить данные" name="change_data" className="footer_button ${buttonClass.buttonChangeData}" onClick=changeData}}}
                   {{{ Button text="Изменить пароль" name="change_password" className="footer_button ${buttonClass.buttonChangePassword}" onClick=changePassword}}}
+                  <a  href="chats" class="text">  
                   {{{ Button text="Выйти" name="exit" className="footer_button button__red ${buttonClass.buttonExit}" onClick=exit}}}
+                  </a>
             </div>
         </div>
       </div>

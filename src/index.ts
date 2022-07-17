@@ -22,12 +22,34 @@ registerComponent(Input);
 // registerComponent(Layout);
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const App = new LoginPage()
-  const App = new ProfilePage(getProfile(2));
-  // const App = new SignUp()
-  // const App = new ChatsPage()
-  // const App = new Error404Page()
-  // const App = new Error500Page()
+  const path = window.location.pathname;
+  let App: Block;
+  switch (path) {
+    case '/':
+      App = new LoginPage();
+      break;
+    case '/login':
+      App = new LoginPage();
+      break;
+    case '/signup':
+      App = new SignUp();
+      break;
+    case '/profile':
+      App = new ProfilePage(getProfile(2));
+      break;
+    case '/chats':
+      App = new ChatsPage();
+      break;
+    case '/404':
+      App = new Error404Page();
+      break;
+    case '/500':
+      App = new Error500Page();
+      break;
+    default:
+      App = new LoginPage();
+      break;
+  }
 
   renderDom(App);
 });

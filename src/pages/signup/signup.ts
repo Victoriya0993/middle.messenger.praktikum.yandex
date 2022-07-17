@@ -109,8 +109,12 @@ export class SignUp extends Block {
               {{{Input placeholder="Пароль (еще раз)" type="password" className="block_input" name="repeat_password" value="${values.repeat_password}" error="${errors.repeat_password}"  id="repeat_password" ref="repeat_password"}}}
           </div>
           <div class="block_footer">
+          <a  class="text">  
               {{{Button className="block_button button__active" text="Зарегистрироваться" name="Sign up" onClick=onSignUp}}}
+              </a>
+              <a  href="chats" class="text">  
               {{{Button className="block_button button__default" text="Войти" name="Sign in" onClick=onLogin}}}
+              </a>
           </div>
       </div>
     </div>

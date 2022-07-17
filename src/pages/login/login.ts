@@ -58,9 +58,13 @@ export class LoginPage extends Block {
               {{{Input className="block_input" placeholder="Логин" type="text" value="${values.login}" error="${errors.login}"  id="login" ref="login"}}}
               {{{Input className="block_input" placeholder="Пароль" type="password" value="${values.password}" error="${errors.password}" id="password" ref="password"}}}
           </div>
-          <div class="block_footer">           
-              {{{Button className="block_button button__active" text="Авторизация" onClick=onLogin }}}         
+          <div class="block_footer"> 
+          <a  href="chats" class="text">       
+              {{{Button className="block_button button__active" text="Авторизация" onClick=onLogin }}} 
+          </a>  
+          <a  href="signup" class="text">        
               {{{Button className="block_button button__default" text="Нет аккаунта?" onClick=onSignUp}}}
+          </a>    
           </div>
       </div>
     </main>

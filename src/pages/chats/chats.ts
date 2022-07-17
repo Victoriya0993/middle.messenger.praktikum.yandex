@@ -9,8 +9,10 @@ export class ChatsPage extends Block {
     return `
     <div class="layout">
       <div class="chats_navigation">
-        <div class="navigation_profile">           
+        <div class="navigation_profile">      
+        <a  href="profile" class="text">      
             {{{ Button className="profile_button profile_button__default" name="profile" text="Профиль"}}}
+            </a>
         </div>
         <div class="navigation_search">
             <div class="search_text">Поиск</div>
