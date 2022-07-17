@@ -1,3 +1,6 @@
+### Ссылка на текущий PR
+https://github.com/Victoriya0993/middle.messenger.praktikum.yandex/pull/11
+
 ### домен из Netlify
 https://heroic-cuchufli-078015.netlify.app/
 
