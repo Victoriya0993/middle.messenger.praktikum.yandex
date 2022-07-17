@@ -133,7 +133,7 @@
   display: none;
 }
 
-.button__active {
+.button_prof__active {
   background: var(--main-bg-color);
   color: var(--primary-color);
   height: 37px;

@@ -19,6 +19,7 @@
         "no-unused-vars": "off",
         "require-jsdoc": "off",
         "max-len": [1, 120],
-        "max-params": [2, 3]
+        "max-params": [2, 3],
+        "prefer-promise-reject-errors": "warn"
     }
 }

@@ -11,9 +11,9 @@ export class ProfilePage extends Block {
       disabled: 'disabled',
       buttonClass: {
         buttonSave: 'button_save__hide',
-        buttonExit: 'button__active',
-        buttonChangePassword: 'button__active',
-        buttonChangeData: 'button__active',
+        buttonExit: 'button_prof__active',
+        buttonChangePassword: 'button_prof__active',
+        buttonChangeData: 'button_prof__active',
       },
       onLogin: () => {
         const loginData = {

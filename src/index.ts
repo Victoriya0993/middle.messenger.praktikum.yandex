@@ -1,6 +1,6 @@
 import 'babel-core/register';
 import renderDom from './core/renderDOM';
-import {registerComponent} from './core';
+import {Block, registerComponent} from './core';
 
 import LoginPage from './pages/login';
 import ProfilePage from './pages/profile';
