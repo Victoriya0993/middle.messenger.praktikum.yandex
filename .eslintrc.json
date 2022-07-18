@@ -20,6 +20,7 @@
         "require-jsdoc": "off",
         "max-len": [1, 120],
         "max-params": [2, 3],
-        "prefer-promise-reject-errors": "warn"
+        "prefer-promise-reject-errors": "warn",
+        "camelcase": "off"
     }
 }

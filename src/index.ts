@@ -19,7 +19,6 @@ import {getProfile} from './utils/getData';
 registerComponent(Button);
 registerComponent(Title);
 registerComponent(Input);
-// registerComponent(Layout);
 
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;

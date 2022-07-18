@@ -4,8 +4,6 @@ import './404.css';
 
 export class Error404Page extends Block {
   render() {
-    // const { errors, values } = this.state;
-
     return `
     <main class="layout">
     <div class="error">

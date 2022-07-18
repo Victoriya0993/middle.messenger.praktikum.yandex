@@ -31,12 +31,8 @@
   background-color: white;
 }
 
-.profile_content {
-  flex: 1;
-  display: flex;
-}
-
 .content_card {
+  flex: 1;
   margin: auto;
   width: 510px;
   display: flex;

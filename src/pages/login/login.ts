@@ -1,4 +1,5 @@
 import Block from '../../core/Block';
+import {validation} from '../../utils/validation';
 
 import './login.css';
 
@@ -27,15 +28,7 @@ export class LoginPage extends Block {
           values: {...loginData},
         };
 
-        if (!loginData.login) {
-          nextState.errors.login = 'Логин не задан';
-        } else if (loginData.login.length < 4) {
-          nextState.errors.login = 'Логин должен содержать более 3 символов';
-        }
-
-        if (!loginData.password) {
-          nextState.errors.password = 'Пароль не задан';
-        }
+        validation(loginData, nextState.errors);
 
         this.setState(nextState);
 

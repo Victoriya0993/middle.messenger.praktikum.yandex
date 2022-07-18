@@ -4,8 +4,6 @@ import './chats.css';
 
 export class ChatsPage extends Block {
   render() {
-    // const { errors, values } = this.state;
-
     return `
     <div class="layout">
       <div class="chats_navigation">

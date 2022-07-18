@@ -1,4 +1,5 @@
 import Block from '../../core/Block';
+import {validation} from '../../utils/validation';
 
 import './signup.css';
 
@@ -24,6 +25,7 @@ export class SignUp extends Block {
         phone: '',
       },
       onSignUp: () => {
+        console.log(this);
         const loginData = {
           email: (this.refs.email.firstElementChild as HTMLInputElement).value,
           login: (this.refs.login.firstElementChild as HTMLInputElement).value,
@@ -47,44 +49,11 @@ export class SignUp extends Block {
           values: {...loginData},
         };
 
-        if (!loginData.email) {
-          nextState.errors.email = 'Email не задан';
-        }
-
-        if (!loginData.first_name) {
-          nextState.errors.first_name = 'Имя не задано';
-        }
-
-        if (!loginData.second_name) {
-          nextState.errors.second_name = 'Фамилия не задана';
-        }
-
-        if (!loginData.phone) {
-          nextState.errors.phone = 'Введите номер телефона';
-        }
-
-        if (!loginData.login) {
-          nextState.errors.login = 'Логин не задан';
-        } else if (loginData.login.length < 4) {
-          nextState.errors.login = 'Логин должен содержать более 3 символов';
-        }
-
-        if (!loginData.password) {
-          nextState.errors.password = 'Пароль не задан';
-        }
-
-        if (!loginData.repeat_password) {
-          nextState.errors.repeat_password = 'Повторите пароль';
-        }
-
-        if (loginData.password != loginData.repeat_password) {
-          nextState.errors.repeat_password = 'Пароли не совпадают';
-          nextState.errors.password = 'Пароли не совпадают';
-        }
+        validation(loginData, nextState.errors);
 
         this.setState(nextState);
 
-        console.log('login/password', loginData);
+        console.log('Personal information: ', loginData);
       },
       onLogin: () => {
         console.log('Надо бы на страницу авторизации перекинуть');
@@ -109,10 +78,10 @@ export class SignUp extends Block {
               {{{Input placeholder="Пароль (еще раз)" type="password" className="block_input" name="repeat_password" value="${values.repeat_password}" error="${errors.repeat_password}"  id="repeat_password" ref="repeat_password"}}}
           </div>
           <div class="block_footer">
-          <a  class="text">  
+              <a  class="text">  
               {{{Button className="block_button button__active" text="Зарегистрироваться" name="Sign up" onClick=onSignUp}}}
               </a>
-              <a  href="chats" class="text">  
+              <a  href="login" class="text">  
               {{{Button className="block_button button__default" text="Войти" name="Sign in" onClick=onLogin}}}
               </a>
           </div>
