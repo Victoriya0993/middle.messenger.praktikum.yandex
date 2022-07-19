@@ -144,3 +144,4 @@ export class ProfilePage extends Block {
 `;
   }
 }
+

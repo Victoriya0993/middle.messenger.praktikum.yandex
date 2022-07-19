@@ -2,10 +2,21 @@
   "name": "project",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel src/index.html -p 3000 --open",
+    "start": "parcel ./src/index.html -p 3000 --open",    
     "lint": "eslint -- './src/{**/*,*}.{ts,js,json}'",
     "lint:fix": "eslint --fix './src/{**/*,*}.{ts,js,json}'",
     "prettier": "prettier --write './src/{**/*,*}.{ts,js,css,json}'"
+  },
+  "engines": {
+    "npm": ">=7.6.3",
+    "node": ">=15.12.0"
+  },
+  "targets": {
+    "default": {
+      "engines": {
+        "browsers": ">= 50%"
+      }
+    }
   },
   "dependencies": {
     "@anikin/parcel-transformer-handlebars": "~1.0.9",
@@ -15,10 +26,6 @@
     "handlebars": "^4.7.7",
     "nanoid": "^4.0.0",
     "parcel": "~2.5.0"
-  },
-  "engines": {
-    "npm": ">=7.6.3",
-    "node": ">=15.12.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.5",
