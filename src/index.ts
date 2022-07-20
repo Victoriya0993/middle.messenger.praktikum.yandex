@@ -22,12 +22,11 @@ registerComponent(Input);
 
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
-  console.log(path);
 
   let App: Block = new LoginPage();
   switch (path) {
     case '/':
-      App = new SignUp();
+      App = new LoginPage();
       break;
     case '/login':
       App = new LoginPage();
