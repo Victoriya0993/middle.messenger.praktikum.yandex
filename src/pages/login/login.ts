@@ -37,6 +37,24 @@ export class LoginPage extends Block {
       onSignUp: () => {
         console.log('Надо бы на страницу регистрации перекинуть');
       },
+      blur: () => {
+        const loginData = {
+          login: (this.refs.login.firstElementChild as HTMLInputElement).value,
+          password: (this.refs.password.firstElementChild as HTMLInputElement).value,
+        };
+        this.state.onLogin();
+        const nextState = {
+          errors: {
+            login: '',
+            password: '',
+          },
+          values: {...loginData},
+        };
+
+        validation(loginData, nextState.errors);
+
+        this.setState(nextState);
+      },
     };
   }
 
@@ -48,8 +66,8 @@ export class LoginPage extends Block {
       <div class="block">
           {{{ Title className="block_title" text="Вход"}}}
           <div class="block_body">              
-              {{{Input className="block_input" placeholder="Логин" type="text" value="${values.login}" error="${errors.login}"  id="login" ref="login"}}}
-              {{{Input className="block_input" placeholder="Пароль" type="password" value="${values.password}" error="${errors.password}" id="password" ref="password"}}}
+              {{{Input className="block_input" placeholder="Логин" type="text" value="${values.login}" error="${errors.login}" id="login" ref="login" onChange=input onBlur=blur}}}
+              {{{Input className="block_input" placeholder="Пароль" type="password" value="${values.password}" error="${errors.password}" id="password" ref="password" onChange=input onBlur=blur}}}
           </div>
           <div class="block_footer"> 
           <a  href="chats" class="text">       
@@ -64,4 +82,3 @@ export class LoginPage extends Block {
     `;
   }
 }
-

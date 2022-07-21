@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel ./src/index.html -p 3000 --open",
+    "start": "parcel ./src/index.html -p 3000 --open --no-cache --no-source-maps",
     "build": "parcel build ./src/index.html",    
     "lint": "eslint -- './src/{**/*,*}.{ts,js,json}'",
     "lint:fix": "eslint --fix './src/{**/*,*}.{ts,js,json}'",

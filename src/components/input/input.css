@@ -9,3 +9,7 @@
   text-align: center;
   height: 12px;
 }
+
+.input__hide {
+    display: none;
+  }

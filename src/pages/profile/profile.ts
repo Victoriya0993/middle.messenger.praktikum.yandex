@@ -23,6 +23,29 @@ export class ProfilePage extends Block {
         buttonChangePassword: 'button_prof__active',
         buttonChangeData: 'button_prof__active',
       },
+      blur: () => {
+        const profileData = {
+          login: (this.refs.login.firstElementChild as HTMLInputElement).value,
+          email: (this.refs.email.firstElementChild as HTMLInputElement).value,
+          first_name: (this.refs.first_name.firstElementChild as HTMLInputElement).value,
+          second_name: (this.refs.second_name.firstElementChild as HTMLInputElement).value,
+          phone: (this.refs.phone.firstElementChild as HTMLInputElement).value,
+        };
+        const nextState = {
+          errors: {
+            login: '',
+            email: '',
+            first_name: '',
+            second_name: '',
+            phone: '',
+          },
+          values: {...profileData},
+        };
+
+        validation(profileData, nextState.errors);
+
+        this.setState(nextState);
+      },
       save: () => {
         const profileData = {
           login: (this.refs.login.firstElementChild as HTMLInputElement).value,
@@ -113,23 +136,23 @@ export class ProfilePage extends Block {
             {{{Title className="card_title" text="${values.first_name}"}}}
             <div class="card_field">
                   <label class="card_field_name">Почта</label>              
-                  {{{Input className="card_field_value" type="text" disabled="${disabled}" value="${values.email}" error="${errors.email}" id="email" ref="email"}}}
+                  {{{Input className="card_field_value" type="text" disabled="${disabled}" value="${values.email}" error="${errors.email}" id="email" ref="email" onBlur=blur}}}
             </div>           
             <div class="card_field">
                   <label class="card_field_name">Логин</label>
-                  {{{Input type="text" name="login" className="card_field_value" value="${values.login}" error="${errors.login}" disabled="${disabled}" id="login" ref="login"}}}
+                  {{{Input type="text" name="login" className="card_field_value" value="${values.login}" error="${errors.login}" disabled="${disabled}" id="login" ref="login" onBlur=blur}}}
             </div>           
             <div class="card_field">
                   <label class="card_field_name">Имя</label>
-                  {{{Input value="${values.first_name}" type="text" name="first_name" className="card_field_value" disabled="${disabled}" error="${errors.first_name}" id="first_name" ref="first_name"}}}
+                  {{{Input value="${values.first_name}" type="text" name="first_name" className="card_field_value" disabled="${disabled}" error="${errors.first_name}" id="first_name" ref="first_name" onBlur=blur}}}
             </div>                     
             <div class="card_field">
                   <label class="card_field_name">Фамилия</label>
-                  {{{Input value="${values.second_name}" type="text" name="second_name" className="card_field_value" disabled="${disabled}" error="${errors.second_name}" id="second_name" ref="second_name"}}}
+                  {{{Input value="${values.second_name}" type="text" name="second_name" className="card_field_value" disabled="${disabled}" error="${errors.second_name}" id="second_name" ref="second_name" onBlur=blur}}}
             </div>                    
             <div class="card_field">
                   <label class="card_field_name">Телефон</label>
-                  {{{Input value="${values.phone}" type="text" name="phone" className="card_field_value" disabled="${disabled}" error="${errors.phone}" id="phone" ref="phone"}}}
+                  {{{Input value="${values.phone}" type="text" name="phone" className="card_field_value" disabled="${disabled}" error="${errors.phone}" id="phone" ref="phone" onBlur=blur}}}
             </div>                                
             <div class="card_footer">
                   {{{ Button text="Сохранить" name="save" className="save_button ${buttonClass.buttonSave}" onClick=save}}}
@@ -144,4 +167,3 @@ export class ProfilePage extends Block {
 `;
   }
 }
-

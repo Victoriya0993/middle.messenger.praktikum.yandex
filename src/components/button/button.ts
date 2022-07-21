@@ -16,6 +16,7 @@ export class Button extends Block {
     return `
     <div class="button">
       <button class='{{className}}'>{{text}}</button>
-    </div>    `;
+    </div>    
+    `;
   }
 }

@@ -58,6 +58,7 @@ const validationName = (name: string) => {
       error = 'Латиница или кириллица, без пробелов, цифр и спецсимволов (допустим только дефис)';
     }
   }
-
-  return error;
+  
+  this.setState(nextState);
+  // return error;
 };
