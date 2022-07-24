@@ -12,15 +12,16 @@ import Error500Page from './pages/500';
 import Button from './components/button';
 import Input from './components/input';
 import Title from './components/title';
+import Chat from './components/chat';
 
 import './index.css';
-import {getProfile} from './utils/getData';
-
-registerComponent(Button);
-registerComponent(Title);
-registerComponent(Input);
+import {getProfile, getChats} from './utils/getData';
 
 document.addEventListener('DOMContentLoaded', () => {
+  registerComponent(Button);
+  registerComponent(Title);
+  registerComponent(Input);
+  registerComponent(Chat);
   const path = window.location.pathname;
 
   let App: Block = new LoginPage();
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       App = new ProfilePage(getProfile(2));
       break;
     case '/chats':
-      App = new ChatsPage();
+      App = new ChatsPage(getChats());
       break;
     case '/404':
       App = new Error404Page();

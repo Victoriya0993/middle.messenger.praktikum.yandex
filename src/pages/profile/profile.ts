@@ -1,7 +1,7 @@
 import Block from '../../core/Block';
 
-import avatar from '../../static/avatar.png';
-import back from '../../static/back.png';
+import avatar from '../../static/icons/avatar.png';
+import back from '../../static/icons/back.svg';
 import {validation} from '../../utils/validation';
 import './profile.css';
 
@@ -115,7 +115,7 @@ export class ProfilePage extends Block {
         this.setState(nextState);
       },
       changePassword: () => {
-        console.log('Срочно меняем пароль');
+        console.log('Меняем пароль');
       },
       exit: () => {
         console.log('Надо бы выйти');

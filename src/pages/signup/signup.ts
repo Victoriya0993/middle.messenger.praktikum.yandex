@@ -117,4 +117,3 @@ export class SignUp extends Block {
     `;
   }
 }
-
