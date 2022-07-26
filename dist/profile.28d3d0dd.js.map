@@ -1,1 +1,0 @@
-{"mappings":"AAAiBA,KAAKC,MAAM","sources":["src/data/chats.json"],"sourcesContent":["[\n  {\n    \"name\": \"Андрей\",\n    \"message\": \"Изображение\",\n    \"img\": \"\",\n    \"time\": \"10:49\",\n    \"new\": 2\n  }\n]\n\n"],"names":["JSON","parse"],"version":3,"file":"profile.28d3d0dd.js.map","sourceRoot":"../"}
