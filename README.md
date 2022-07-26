@@ -1,4 +1,9 @@
 ### Валидация выполняется на страницах "Вход", "Рецистрация" и "Профиль". В случае с профилем, валидация работает при редактировании полей (после нажатия на кнопку "Изменить данные")
+### Ссылка на текущий PR
+https://github.com/Victoriya0993/middle.messenger.praktikum.yandex/pull/15
+
+### домен из Netlify
+https://heroic-cuchufli-078015.netlify.app/
 
 ### Стандартный UI: 
 https://www.figma.com/file/0S1Z9frp5nczjvyNNMRU7c/Chat_external_link-(Copy)?node-id=0%3A1
