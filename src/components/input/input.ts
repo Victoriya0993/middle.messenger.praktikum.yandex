@@ -15,6 +15,7 @@ interface InputProps {
 }
 
 export class Input extends Block {
+  static componentName='Input';
   constructor({className, id, placeholder, type, value, error, disabled, onChange, onBlur, onFocus}: InputProps) {
     // Создаём враппер DOM-элемент button
     super({

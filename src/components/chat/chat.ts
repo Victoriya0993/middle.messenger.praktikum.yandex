@@ -11,9 +11,11 @@ interface ButtonProps {
 }
 
 export class Chat extends Block {
+  static componentName='Chat';
   constructor({img, name, new_message, time, count_message, onClick}: ButtonProps) {
     // Создаём враппер DOM-элемент button
     super({img, name, new_message, time, count_message, events: {click: onClick}});
+    console.log(onClick);
   }
 
   render() {

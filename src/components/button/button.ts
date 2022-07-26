@@ -7,6 +7,7 @@ interface ButtonProps {
 }
 
 export class Button extends Block {
+  static componentName='Button';
   constructor({className, text, onClick}: ButtonProps) {
     // Создаём враппер DOM-элемент button
     super({className, text, events: {click: onClick}});

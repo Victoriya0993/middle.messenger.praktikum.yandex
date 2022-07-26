@@ -9,11 +9,12 @@ import {getContentChat} from '../../utils/getData';
 export class ChatsPage extends Block {
   protected getStateFromProps(chats: any) {
     this.state = {
-      list_chats: chats[0],
+      list_chats: chats,
       chat_id: '',
       content_chat: 'Выберите чат, чтобы отправить сообщение',
       message: '',
       openChat: (e: any) => {
+        console.log('нажали');
         const id = 1;
         const content = getContentChat(id);
         const nextState = {
@@ -45,7 +46,9 @@ export class ChatsPage extends Block {
             <div class="search_text">Поиск</div>
         </div>
         <div class="navigation_list">
-            {{{Chat img="${avatar}" name="${list_chats.name}" new_message="${list_chats.new_message}" time="${list_chats.time}" count_message="${list_chats.count_message}" onClick=openChat id="chat" ref="chat"}}}
+        {{#each list_chats}}
+            {{{Chat img="${avatar}" name="{{name}}" new_message="{{new_message}}" time="{{time}}" count_message="{{count_message}}" onClick=openChat id="chat" ref="chat"}}}
+        {{/each}}
         </div>
       </div>
       <div class="chats_content">
@@ -54,7 +57,7 @@ export class ChatsPage extends Block {
         </div>
         <div class="${className}">
           <img src='${clip}' class='content_message_img'/>
-          {{{Input className="content_message_input" type="text" placeholder="Сообщение" value="${message}" id="message" ref="message"}}}
+            {{{Input className="content_message_input" type="text" placeholder="Сообщение" value="${message}" id="message" ref="message"}}}
           <img src='${to}' class='content_message_img'/>
         </div>
       </div>

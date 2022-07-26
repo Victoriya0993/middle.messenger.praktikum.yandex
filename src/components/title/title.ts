@@ -6,6 +6,7 @@ interface TitleProps {
 }
 
 export class Title extends Block {
+  static componentName='Title';
   constructor({className, text}: TitleProps) {
     // Создаём враппер DOM-элемент button
     super({className, text});
