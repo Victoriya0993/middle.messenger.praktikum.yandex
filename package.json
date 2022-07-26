@@ -2,21 +2,11 @@
   "name": "project",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel ./src/index.html -p 3000 --open",    
-    "lint": "eslint -- './src/{**/*,*}.{ts,js,json}'",
-    "lint:fix": "eslint --fix './src/{**/*,*}.{ts,js,json}'",
+    "start": "parcel ./src/index.html -p 3000 --open --no-cache --no-source-maps",
+    "build": "parcel build ./src/index.html --no-cache --no-source-maps --public-url ./",
+    "stylelint": "stylelint './src/{**/*,*}.css' --fix",
+    "lint": "eslint --fix './src/{**/*,*}.{ts,js,json}'",
     "prettier": "prettier --write './src/{**/*,*}.{ts,js,css,json}'"
-  },
-  "engines": {
-    "npm": ">=7.6.3",
-    "node": ">=15.12.0"
-  },
-  "targets": {
-    "default": {
-      "engines": {
-        "browsers": ">= 50%"
-      }
-    }
   },
   "dependencies": {
     "@anikin/parcel-transformer-handlebars": "~1.0.9",

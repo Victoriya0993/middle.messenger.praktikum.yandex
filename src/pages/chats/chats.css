@@ -1,13 +1,8 @@
-/* Обычный */
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
-}
 
 :root {
-  --main-bg-color: #ffffff;
-  --second-color: #ffffff;
-  --second-text-color: #999999;
+  --main-bg-color: #fff;
+  --second-color-chat: #efefef;
+  --second-text-color: #999;
 }
 
 .layout {
@@ -21,9 +16,9 @@
   height: 100%;
   display: flex;
   flex-flow: column;
-  border: 1px #eaeaea;
+  border: 1px var(--second-color-chat);
   border-right-style: solid;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 .navigation_profile {
@@ -35,7 +30,7 @@
   text-align: right;
   width: 100%;
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
   border: none;
@@ -49,19 +44,19 @@
   margin-top: 21px;
 }
 
+.text,
 .text:active,
-.text:hover,
-.text {
+.text:hover {
   text-decoration: none;
   color: #666;
 }
 
 .navigation_search {
-  background-color: #efefef;
+  background-color: var(--second-color-chat);
   border-radius: 5px;
   margin-bottom: 10px;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -74,16 +69,18 @@
 }
 
 .navigation_list {
-  margin: auto;
+  width: 100%;
 }
 
 .chats_content {
   flex: 1;
   display: flex;
+  flex-flow: column;
+  margin: 5px;
 }
 
 .content_text {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -94,4 +91,32 @@
   height: 12px;
   font-size: 12px;
   line-height: 12px;
+}
+
+.content_message {
+  border: 1px var(--second-color-chat);
+  border-top-style: solid;
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.content_message__hide {
+  display: none;
+}
+
+.content_message_input {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  height: 32px;
+  background-color: var(--second-color-chat);
+  border: none;
+  border-radius: 30px;
+}
+
+.content_message_img {
+  width: 32px;
+  height: 32px;
 }

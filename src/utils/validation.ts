@@ -1,15 +1,12 @@
 export const validation = (values: any, errors: any) => {
   const {first_name, second_name, login, email, password, phone, message, repeat_password} = values;
-  const valid = true;
 
   if (first_name) {
-    const first_char = first_name.split('')[0];
-    if (first_char != first_char.toUpperCase()) errors.first_name = 'Первая буква должна быть заглавной';
+    errors.first_name = validationName(first_name);
   } else errors.first_name = 'Не задано имя';
 
   if (second_name) {
-    const first_char = second_name.split('')[0];
-    if (first_char != first_char.toUpperCase()) errors.second_name = 'Первая буква должна быть заглавной';
+    errors.second_name = validationName(second_name);
   } else errors.second_name = 'Не задана фамилия';
 
   if (login) {
@@ -48,4 +45,19 @@ export const validation = (values: any, errors: any) => {
 
   if (message) {
   } else errors.message = 'Поле сообщения не должно быть пустым';
+};
+
+const validationName = (name: string) => {
+  let error = '';
+
+  const first_char = name.split('')[0];
+  if (first_char != first_char.toUpperCase()) error = 'Первая буква должна быть заглавной';
+
+  for (const char of name) {
+    if (/[^а-яёА-ЯЁa-zA-Z-]/.test(char)) {
+      error = 'Латиница или кириллица, без пробелов, цифр и спецсимволов (допустим только дефис)';
+    }
+  }
+
+  return error;
 };
