@@ -1,0 +1,31 @@
+<main class="{{styles.layout}}">
+    <div class="{{styles.back}}"> {{{back_icon}}} </div>
+       <div class="{{styles.content_card}}">
+          {{{avatar}}}
+          {{!-- <img src="{{avatar}}" class="{{styles.avatar}}" /> --}}
+           <div class="{{styles.card_title}}"> {{first_name}} </div>
+            <div class="{{styles.card_field}}">
+                <label class="{{styles.card_field_name}}">Почта</label>
+                {{{editemail}}}
+           </div>           
+           <div class="{{styles.card_field}}">
+                <label class="{{styles.card_field_name}}">Логин</label>
+                {{{editlogin}}}           
+          </div>           
+           <div class="{{styles.card_field}}">
+                <label class="{{styles.card_field_name}}">Имя</label>
+                {{{editfirst_name}}}
+           </div>                     
+           <div class="{{styles.card_field}}">
+                <label class="{{styles.card_field_name}}">Фамилия</label>
+                {{{editsecond_name}}}
+           </div>                    
+           <div class="{{styles.card_field}}">
+                <label class="{{styles.card_field_name}}">Телефон</label>
+                {{{editphone}}}
+           </div>    
+           {{{button_change_data}}}
+           {{{button_change_password}}}
+           {{{button_exit}}}
+    </div>
+</main>

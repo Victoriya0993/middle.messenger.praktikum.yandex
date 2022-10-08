@@ -1,56 +1,56 @@
-import 'babel-core/register';
-import renderDom from './core/renderDOM';
-import {Block, registerComponent} from './core';
-
-import LoginPage from './pages/login';
-import ProfilePage from './pages/profile';
-import SignUp from './pages/signup';
-import ChatsPage from './pages/chats';
-import Error404Page from './pages/404';
-import Error500Page from './pages/500';
-
-import Button from './components/button';
-import Input from './components/input';
-import Title from './components/title';
-import Chat from './components/chat';
-
+import LoginPage from './pages/LoginPage';
+import SignUp from './pages/SignupPage';
+import Router from './core/Router';
+import ProfilePage from './pages/ProfilePage';
+import AuthController from './controllers/AuthController';
+import {AvatarPage} from './pages/EditProfile/avatar';
+import {EditProfilePage} from './pages/EditProfile/datauser';
+import {PasswordPage} from './pages/EditProfile/password';
+import {ChatPage} from './pages/ChatsPage/chats';
+import store from './core/Store';
 import './index.css';
-import {getProfile, getChats} from './utils/getData';
 
-document.addEventListener('DOMContentLoaded', () => {
-  registerComponent(Button);
-  registerComponent(Title);
-  registerComponent(Input);
-  registerComponent(Chat);
-  const path = window.location.pathname;
+enum Routes {
+  Index = '/',
+  Register = '/sign-up',
+  Profile = '/profile',
+  Avatar = '/avatar',
+  EditProfile = '/settings',
+  Password = '/editpassword',
+  Chats = '/messenger',
+}
 
-  let App: Block = new LoginPage();
-  switch (path) {
-    case '/':
-      App = new LoginPage();
-      break;
-    case '/login':
-      App = new LoginPage();
-      break;
-    case '/signup':
-      App = new SignUp();
-      break;
-    case '/profile':
-      App = new ProfilePage(getProfile(2));
-      break;
-    case '/chats':
-      App = new ChatsPage(getChats());
-      break;
-    case '/404':
-      App = new Error404Page();
-      break;
-    case '/500':
-      App = new Error500Page();
-      break;
-    default:
-      App = new LoginPage();
+window.addEventListener('DOMContentLoaded', async () => {
+  Router.use(Routes.Index, LoginPage)
+    .use(Routes.Register, SignUp)
+    .use(Routes.Profile, ProfilePage)
+    .use(Routes.Avatar, AvatarPage)
+    .use(Routes.EditProfile, EditProfilePage)
+    .use(Routes.Password, PasswordPage)
+    .use(Routes.Chats, ChatPage);
+
+  let isProtectedRoute = true;
+
+  switch (window.location.pathname) {
+    case Routes.Index:
+    case Routes.Register:
+      isProtectedRoute = false;
       break;
   }
 
-  renderDom(App);
+  try {
+    await AuthController.fetchUser();
+
+    Router.start();
+
+    if (!isProtectedRoute) {
+      Router.go(Routes.Profile);
+    }
+  } catch (e) {
+    Router.start();
+
+    if (isProtectedRoute) {
+      Router.go(Routes.Index);
+    }
+  }
 });

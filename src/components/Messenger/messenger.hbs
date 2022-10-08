@@ -1,0 +1,17 @@
+ {{#if selectedChat }}
+ <div class="{{styles.content_message}}">
+    <div class="{{styles.messages}}">
+        {{#each messages}}
+            {{{this}}}
+        {{/each}}
+    </div>
+    <div class="{{ styles.content_message_footer }}">
+        {{{input}}}
+        {{{button}}}
+    </div>
+</div>
+{{else}}
+    <div class={{styles.content_text}}>
+        Выберите чат для отправки сообщений
+    </div>
+{{/if}}
