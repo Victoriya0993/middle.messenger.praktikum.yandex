@@ -3,7 +3,6 @@ import SignUp from './pages/SignupPage';
 import Router from './core/Router';
 import ProfilePage from './pages/ProfilePage';
 import AuthController from './controllers/AuthController';
-import {AvatarPage} from './pages/EditProfile/avatar';
 import {EditProfilePage} from './pages/EditProfile/datauser';
 import {PasswordPage} from './pages/EditProfile/password';
 import {ChatPage} from './pages/ChatsPage/chats';
@@ -14,7 +13,6 @@ enum Routes {
   Index = '/',
   Register = '/sign-up',
   Profile = '/profile',
-  Avatar = '/avatar',
   EditProfile = '/settings',
   Password = '/editpassword',
   Chats = '/messenger',
@@ -24,7 +22,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   Router.use(Routes.Index, LoginPage)
     .use(Routes.Register, SignUp)
     .use(Routes.Profile, ProfilePage)
-    .use(Routes.Avatar, AvatarPage)
     .use(Routes.EditProfile, EditProfilePage)
     .use(Routes.Password, PasswordPage)
     .use(Routes.Chats, ChatPage);

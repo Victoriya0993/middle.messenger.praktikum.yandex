@@ -26,7 +26,6 @@ class ProfilePageBase extends Block {
       class: styles.avatar,
       events: {
         click: () => {
-          router.go('/avatar');
         },
       },
     });
