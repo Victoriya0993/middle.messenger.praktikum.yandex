@@ -1,6 +1,5 @@
-// import { LoginRequest } from '../../api_/apiLogin_';
 import Block from '../../core/Block';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 import {Input} from '../../components/Input';
 import template from './avatar.hbs';
 import UserController from '../../controllers/UserController';

@@ -5,7 +5,7 @@ import {Input} from '../Input';
 import {Button} from '../Button';
 import MessagesController, {Message as MessageInfo} from '../../controllers/MessagesController';
 import {withStore} from '../../core/Store';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 
 interface MessengerProps {
   selectedChat: number | undefined;

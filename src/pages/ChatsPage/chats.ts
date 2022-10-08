@@ -5,7 +5,7 @@ import template from './chats.hbs';
 import ChatController from '../../controllers/ChatController';
 import {ChatsList} from '../../components/ChatsList';
 import {Messenger} from '../../components/Messenger';
-import styles from './chats.module.css';
+import * as styles from './chats.module.css';
 import store, {withStore} from '../../core/Store';
 import {Modal} from '../../components/ModalNewChat';
 

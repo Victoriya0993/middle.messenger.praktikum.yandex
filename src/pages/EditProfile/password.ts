@@ -1,6 +1,6 @@
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 import {Input} from '../../components/Input';
 import {Button} from '../../components/Button';
 import template from './password.hbs';

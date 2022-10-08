@@ -4,7 +4,7 @@ import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
 import UserController from '../../controllers/UserController';
 import {Button} from '../../components/Button';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
 import {Icon} from '../../components/Icon';

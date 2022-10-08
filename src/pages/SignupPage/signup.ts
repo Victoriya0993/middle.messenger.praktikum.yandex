@@ -2,7 +2,7 @@
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import AuthController from '../../controllers/AuthController';
-import styles from './signup.module.css';
+import * as styles from './signup.module.css';
 import {Input} from '../../components/Input';
 import {Button} from '../../components/Button';
 import template from './signup.hbs';

@@ -1,7 +1,7 @@
 // import { LoginRequest } from '../../api_/apiLogin_';
 import Block from '../../core/Block';
 import AuthController from '../../controllers/AuthController';
-import styles from './login.module.css';
+import * as styles from './login.module.css';
 import {Input} from '../../components/Input';
 import {Button} from '../../components/Button';
 import template from './login.hbs';

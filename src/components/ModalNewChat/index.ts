@@ -1,7 +1,7 @@
 import Block from '../../core/Block';
 import {Button} from '../Button';
 import template from './modal.hbs';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 import store from '../../core/Store';
 import {Input} from '../Input';
 import ChatController from '../../controllers/ChatController';
