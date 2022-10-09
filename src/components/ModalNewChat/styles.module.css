@@ -7,7 +7,7 @@
   left: 0;
   background: rgb(0 0 0 / 50%);
   z-index: 1050;
-  transition: opacity 200ms ease-in;
+  transition: opacity 0.2s ease-in;
   margin: 0;
   padding: 0;
   color: red;

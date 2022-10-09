@@ -2,9 +2,9 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "selector-class-pattern": null,
-      "selector-list-comma-newline-after": "never-multi-line",
-      "max-empty-lines": 2,
-      "number-leading-zero": "never"
+      "selector-list-comma-newline-after": "always",
+      "max-empty-lines": 1,
+      "number-leading-zero": "always"
     },
     "ignoreFiles": [
       "build/*",
