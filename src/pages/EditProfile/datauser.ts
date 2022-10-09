@@ -4,11 +4,11 @@ import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
 import UserController from '../../controllers/UserController';
 import {Button} from '../../components/Button_/button';
-import * as styles from './styles.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
 import {Icon} from '../../components/Icon/icon';
 import {Input} from '../../components/Input_/input';
+import * as styles from '../../styles/styles.module.css';
 
 class EditProfileBase extends Block {
   init() {

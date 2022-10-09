@@ -1,12 +1,12 @@
 // import { LoginRequest } from '../../api_/apiLogin_';
 import Block from '../../core/Block';
 import AuthController from '../../controllers/AuthController';
-import * as styles from './login.module.css';
 import {Input} from '../../components/Input_/input';
 import {Button} from '../../components/Button_/button';
 import template from './login.hbs';
 import {Link} from '../../components/Link/link';
 import {SignupData} from '../../api/AuthAPI';
+import * as styles from '../../styles/styles.module.css';
 
 export class LoginPage extends Block {
   constructor() {
@@ -30,7 +30,7 @@ export class LoginPage extends Block {
 
     this.children.button = new Button({
       label: 'Войти',
-      class: styles.block_button,
+      class: styles.block_main_button,
       events: {
         click: () => this.onSubmit(),
       },

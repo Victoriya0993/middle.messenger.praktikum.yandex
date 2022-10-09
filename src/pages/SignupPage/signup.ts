@@ -1,8 +1,7 @@
-// // import { LoginRequest } from '../../api_/apiLogin_';
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import AuthController from '../../controllers/AuthController';
-import * as styles from './signup.module.css';
+import * as styles from '../../styles/styles.module.css';
 import {Input} from '../../components/Input_/input';
 import {Button} from '../../components/Button_/button';
 import template from './signup.hbs';
@@ -20,7 +19,7 @@ export class SignUpBase extends Block {
   init() {
     this.children.email = new Input({
       name: 'email',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'text',
       placeholder: 'Email',
       events: {
@@ -30,7 +29,7 @@ export class SignUpBase extends Block {
 
     this.children.login = new Input({
       name: 'login',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'text',
       placeholder: 'Логин',
       events: {
@@ -40,7 +39,7 @@ export class SignUpBase extends Block {
 
     this.children.first_name = new Input({
       name: 'first_name',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'text',
       placeholder: 'Имя',
       events: {
@@ -50,7 +49,7 @@ export class SignUpBase extends Block {
 
     this.children.second_name = new Input({
       name: 'second_name',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'text',
       placeholder: 'Фамилия',
       events: {
@@ -60,7 +59,7 @@ export class SignUpBase extends Block {
 
     this.children.phone = new Input({
       name: 'phone',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'text',
       placeholder: 'Телефон',
       events: {
@@ -70,7 +69,7 @@ export class SignUpBase extends Block {
 
     this.children.password = new Input({
       name: 'password',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'password',
       placeholder: 'Пароль',
       events: {
@@ -80,7 +79,7 @@ export class SignUpBase extends Block {
 
     this.children.repeat_password = new Input({
       name: 'repeat_password',
-      class: styles.block_input,
+      class: styles.signup_block_input,
       type: 'password',
       placeholder: 'Повторите пароль',
       events: {

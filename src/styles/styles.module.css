@@ -1,0 +1,387 @@
+.signup_layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  padding: 10px auto;
+}
+
+.block {
+  margin: auto;
+  top: 20;
+  bottom: 20;
+  width: 340px;
+  min-height: 450px;
+  background: var(--main-bg-color);
+  box-shadow: 0 0 6px rgb(0 0 0 / 14%);
+  border-radius: 12px;
+  display: flex;
+  flex-flow: column;
+}
+
+.block_title {
+  text-align: center;
+  padding-top: 50px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--main-text-color);
+}
+
+.block_body {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 30px;
+}
+
+.block_footer {
+  padding-bottom: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.button__active {
+  background: var(--primary-color);
+  color: var(--second-color);
+  height: 37px;
+  font-size: 13px;
+  line-height: 37px;
+  border: 0;
+}
+
+.button__default {
+  background: var(--second-color);
+  color: var(--primary-color);
+  font-size: 11px;
+  margin-top: 14px;
+}
+
+.text,
+.text:active,
+.text:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.signup_block_input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: var(--main-text-color);
+  height: 27px;
+  width: 280px;
+  border: 1px var(--primary-color);
+  border-bottom-style: solid;
+}
+
+.input__error {
+  color: rgb(241 18 18 / 80%);
+  font-size: 12px;
+  text-align: center;
+  height: 12px;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.back {
+  height: 100%;
+  width: 64px;
+  border: 1px var(--border-color);
+  border-right-style: solid;
+  display: flex;
+}
+
+.back_icon {
+  margin: auto;
+  height: 28px;
+  width: 28px;
+}
+
+.profile {
+  background-color: white;
+}
+
+.content_card {
+  margin: auto;
+  width: 510px;
+  display: flex;
+  flex-flow: column;
+}
+
+.card_title {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--main-text-color);
+  font-size: 16px;
+  margin-top: 21px;
+  margin-bottom: 60px;
+}
+
+.card_field {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row;
+  border: 1px var(--border-color);
+  border-bottom-style: solid;
+  height: 27px;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.card_field_name {
+  text-align: left;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--main-text-color);
+  font-size: 13px;
+}
+
+.card_field_value {
+  text-align: right;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  font-size: 13px;
+  border: 0;
+}
+
+.avatar {
+  margin: auto;
+  width: 130px;
+  height: 130px;
+}
+
+.card_footer {
+  margin-top: 60px;
+  display: flex;
+  flex-flow: column;
+}
+
+.footer_button {
+  width: 100%;
+  border: 1px var(--border-color);
+  border-bottom-style: solid;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.save_button {
+  display: flex;
+  margin: 0 auto;
+  width: 280px;
+  border: none;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button_save__active {
+  background: var(--primary-color);
+  color: var(--main-bg-color);
+  height: 37px;
+  font-size: 13px;
+  line-height: 37px;
+}
+
+.button_save__hide {
+  display: none;
+}
+
+.button_prof__active {
+  background: var(--main-bg-color);
+  color: var(--primary-color);
+  height: 37px;
+  font-size: 13px;
+  line-height: 37px;
+}
+
+.button__hide {
+  display: none;
+}
+
+.button__red {
+  background: var(--main-bg-color);
+  color: var(--attention-color);
+  font-size: 13px;
+  line-height: 37px;
+}
+
+.password_block {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 340px;
+  background: var(--main-bg-color);
+  box-shadow: 0 0 6px rgb(0 0 0 / 14%);
+  border-radius: 12px;
+  display: flex;
+  flex-flow: column;
+}
+
+.block_input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  color: var(--main-text-color);
+  height: 27px;
+  width: 280px;
+  border: 1px var(--primary-color);
+  border-bottom-style: solid;
+}
+
+.block_main_button {
+  margin: 0 auto;
+  width: 280px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--second-color);
+  height: 37px;
+  font-size: 13px;
+  line-height: 37px;
+}
+
+.chats_navigation {
+  width: 310px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  border: 1px var(--second-color-chat);
+  border-right-style: solid;
+  padding: 0 10px;
+}
+
+.navigation_profile {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+
+.newchat_button {
+  width: 100px;
+  text-align: left;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.profile_button {
+  flex: 1;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.profile_button__default {
+  background: var(--second-color);
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  margin-top: 21px;
+}
+
+.profile_button__default:active,
+.profile_button__default:hover {
+  color: #b29fe7;
+}
+
+.navigation_search {
+  background-color: var(--second-color-chat);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.search_text {
+  color: var(--secondary-text-color);
+  height: 32px;
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.navigation_list {
+  width: 100%;
+  overflow: auto;
+}
+
+.chats_content {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  height: 100%;
+}
+
+.block_button {
+  margin: 0 auto;
+  width: 280px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.error_name {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--primary-text-color);
+}
+
+.error_comment {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--primary-text-color);
+  padding-top: 20px;
+  padding-bottom: 70px;
+}

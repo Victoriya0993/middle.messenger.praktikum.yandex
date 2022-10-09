@@ -1,12 +1,12 @@
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
-import * as styles from './styles.module.css';
 import {Input} from '../../components/Input_/input';
 import {Button} from '../../components/Button_/button';
 import template from './password.hbs';
 import store, {withStore} from '../../core/Store';
 import {Link} from '../../components/Link/link';
 import UserController from '../../controllers/UserController';
+import * as styles from '../../styles/styles.module.css';
 
 let errors;
 
@@ -45,7 +45,7 @@ export class PasswordPageBase extends Block {
 
     this.children.save = new Button({
       label: 'Сохранить',
-      class: styles.block_button,
+      class: styles.block_main_button,
       events: {
         click: () => this.onSubmit(),
       },

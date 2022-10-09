@@ -5,9 +5,9 @@ import template from './chats.hbs';
 import ChatController from '../../controllers/ChatController';
 import {ChatsList} from '../../components/ChatsList/chatlist';
 import {Messenger} from '../../components/Messenger/messeger';
-import * as styles from './chats.module.css';
 import store, {withStore} from '../../core/Store';
 import {Modal} from '../../components/ModalNewChat/modal';
+import * as styles from '../../styles/styles.module.css';
 
 export class ChatPageBase extends Block {
   constructor() {
