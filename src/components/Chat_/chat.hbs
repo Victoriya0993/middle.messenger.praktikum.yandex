@@ -1,0 +1,19 @@
+<div class="{{styles.list_component-chat}} {{#if isSelected }}{{ styles.list_component-chat--selected}}{{/if}}">      
+    <div class="{{styles.component-chat}}">
+        <img src="{{img}}" class="{{styles.component-chat_img}}"/>
+        <div class="{{styles.component-chat_main}}">
+            <div class="{{styles.component-chat_main_name}}">"{{title}}"</div>
+            {{#if last_message }}
+            <div class="{{styles.component-chat_main_message}}">"{{last_message.content}}"</div>
+            {{/if}}
+        </div>
+        <div class="{{styles.component-chat_info}}">
+            {{#if last_message }}
+            <div class="{{styles.component-chat_info_time}}">"{{last_message.time}}"</div>
+            {{/if}}
+            {{#if unread_count }}
+            <div class="{{styles.component-chat_info_count}}">"{{unread_count}}"</div>
+            {{/if}}
+        </div>
+    </div>
+</div>   

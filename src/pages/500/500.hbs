@@ -1,19 +1,7 @@
----
-title: 500
-css:
-  - base.css
-  - error.css
-  - block.css
----
-
-{{!< base}}
-
-<main class="layout">
-    <div class="error">
-        {{> title class="error_name" text="500"}}
-        {{> title class="error_comment" text="Мы уже фиксим"}}   
-        <a href="./index.hbs" class="text">
-            {{> button class="block_button button__default" text="Назад к чатам"}}
-        </a>       
+<main class="{{styles.layout}}">
+    <div class="{{styles.error}}">
+        <div class="{{styles.error_name}}">500</div>
+        <div class="{{styles.error_comment}}">Мы уже фиксим</div>
+            {{{link}}}
     </div>
 </main>
