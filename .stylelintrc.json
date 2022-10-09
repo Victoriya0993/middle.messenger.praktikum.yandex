@@ -1,7 +1,8 @@
 {
     "extends": "stylelint-config-standard",
     "rules": {
-      "selector-class-pattern": null
+      "selector-class-pattern": null,
+      "selector-list-comma-newline-after": "always"
     },
     "ignoreFiles": [
       "build/*",

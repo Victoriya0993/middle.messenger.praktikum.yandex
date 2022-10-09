@@ -9,16 +9,6 @@
   margin: auto;
 }
 
-:root {
-  --main-bg-color: #fff;
-  --primary-color: #3369f3;
-  --attention-color: #f00;
-  --second-color: #fff;
-  --main-text-color: #1e1e1e;
-  --secondary-text-color: #999;
-  --border-color: #eaeaea;
-}
-
 .back {
   height: 100%;
   width: 64px;
