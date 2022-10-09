@@ -1,7 +1,7 @@
 import Block from '../../core/Block';
 import {Button} from '../Button_/button';
 import template from './modal.hbs';
-import * as styles from './styles.module.css';
+import * as styles from '../../styles/styles.module.css';
 import store from '../../core/Store';
 import {Input} from '../Input_/input';
 import ChatController from '../../controllers/ChatController';
@@ -22,7 +22,7 @@ export class Modal extends Block<ModalProps> {
   init() {
     this.children.close = new Button({
       label: 'Добавить',
-      class: styles.block_button,
+      class: styles.block_button_modal,
       events: {
         click: () => {
           store.set('flagNewChat', false);

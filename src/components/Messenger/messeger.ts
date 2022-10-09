@@ -5,7 +5,7 @@ import {Input} from '../Input_/input';
 import {Button} from '../Button_/button';
 import MessagesController, {Message as MessageInfo} from '../../controllers/MessagesController';
 import {withStore} from '../../core/Store';
-import * as styles from './styles.module.css';
+import * as styles from '../../styles/styles.module.css';
 
 interface MessengerProps {
   selectedChat: number | undefined;
@@ -24,13 +24,13 @@ class MessengerBase extends Block<MessengerProps> {
       type: 'text',
       placeholder: 'Сообщение',
       name: 'message',
-      class: styles.content_message_input,
+      class: styles.content_messenger_input,
     });
 
     this.children.button = new Button({
       label: 'Отправить',
       type: 'button',
-      class: styles.block_button,
+      class: styles.block_button_messenger,
       events: {
         click: () => {
           const input = this.children.input as Input;
