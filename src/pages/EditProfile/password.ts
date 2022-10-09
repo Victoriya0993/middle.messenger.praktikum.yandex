@@ -1,11 +1,11 @@
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import * as styles from './styles.module.css';
-import {Input} from '../../components/input/input';
-import {Button} from '../../components/button/button';
+import {Input} from '../../components/Input_/input';
+import {Button} from '../../components/Button_/button';
 import template from './password.hbs';
 import store, {withStore} from '../../core/Store';
-import {Link} from '../../components/link/link';
+import {Link} from '../../components/Link/link';
 import UserController from '../../controllers/UserController';
 
 let errors;

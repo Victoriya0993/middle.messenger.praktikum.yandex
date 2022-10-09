@@ -3,12 +3,12 @@ import template from './datauser.hbs';
 import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
 import UserController from '../../controllers/UserController';
-import {Button} from '../../components/button/button';
+import {Button} from '../../components/Button_/button';
 import * as styles from './styles.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
-import {Icon} from '../../components/icon/icon';
-import {Input} from '../../components/input/input';
+import {Icon} from '../../components/Icon/icon';
+import {Input} from '../../components/Input_/input';
 
 class EditProfileBase extends Block {
   init() {

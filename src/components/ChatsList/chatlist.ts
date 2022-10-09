@@ -1,6 +1,6 @@
 import Block from '../../core/Block';
 import template from './chatsList.hbs';
-import {Chat} from '../chat/chat';
+import {Chat} from '../Chat_/chat';
 import {withStore} from '../../core/Store';
 import {ChatInfo} from '../../api/ChatAPI';
 import ChatController from '../../controllers/ChatController';

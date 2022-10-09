@@ -3,10 +3,10 @@ import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import AuthController from '../../controllers/AuthController';
 import * as styles from './signup.module.css';
-import {Input} from '../../components/input/input';
-import {Button} from '../../components/button/button';
+import {Input} from '../../components/Input_/input';
+import {Button} from '../../components/Button_/button';
 import template from './signup.hbs';
-import {Link} from '../../components/link/link';
+import {Link} from '../../components/Link/link';
 import {SignupData} from '../../api/AuthAPI';
 import store, {withStore} from '../../core/Store';
 

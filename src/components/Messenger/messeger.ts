@@ -1,8 +1,8 @@
 import Block from '../../core/Block';
 import template from './messenger.hbs';
-import {Message} from '../message/massage';
-import {Input} from '../input/input';
-import {Button} from '../button/button';
+import {Message} from '../Message/massage';
+import {Input} from '../Input_/input';
+import {Button} from '../Button_/button';
 import MessagesController, {Message as MessageInfo} from '../../controllers/MessagesController';
 import {withStore} from '../../core/Store';
 import * as styles from './styles.module.css';

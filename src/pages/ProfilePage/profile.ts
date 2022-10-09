@@ -2,11 +2,11 @@ import Block from '../../core/Block';
 import template from './profile.hbs';
 import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
-import {Button} from '../../components/button/button';
+import {Button} from '../../components/Button_/button';
 import * as styles from './profile.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
-import {Icon} from '../../components/icon/icon';
+import {Icon} from '../../components/Icon/icon';
 import router from '../../core/Router';
 
 class ProfilePageBase extends Block {

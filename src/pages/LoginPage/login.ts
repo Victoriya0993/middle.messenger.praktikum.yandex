@@ -2,10 +2,10 @@
 import Block from '../../core/Block';
 import AuthController from '../../controllers/AuthController';
 import * as styles from './login.module.css';
-import {Input} from '../../components/input/input';
-import {Button} from '../../components/button/button';
+import {Input} from '../../components/Input_/input';
+import {Button} from '../../components/Button_/button';
 import template from './login.hbs';
-import {Link} from '../../components/link/link';
+import {Link} from '../../components/Link/link';
 import {SignupData} from '../../api/AuthAPI';
 
 export class LoginPage extends Block {
