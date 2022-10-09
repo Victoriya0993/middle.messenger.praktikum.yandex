@@ -1,7 +1,7 @@
 import Block from '../../core/Block';
 import * as styles from './404.module.css';
 import template from './404.hbs';
-import {Link} from '../../components/Link/link';
+import {Link} from '../../components/link/link';
 
 export class Error404Page extends Block {
   constructor() {

@@ -1,13 +1,13 @@
 import Block from '../../core/Block';
 import router from '../../core/Router';
-import {Button} from '../../components/Button/button';
+import {Button} from '../../components/button/button';
 import template from './chats.hbs';
 import ChatController from '../../controllers/ChatController';
-import {ChatsList} from '../../components/ChatsList/chatlist';
-import {Messenger} from '../../components/Messenger/messeger';
+import {ChatsList} from '../../components/chatsList/chatlist';
+import {Messenger} from '../../components/messenger/messeger';
 import * as styles from './chats.module.css';
 import store, {withStore} from '../../core/Store';
-import {Modal} from '../../components/ModalNewChat/modal';
+import {Modal} from '../../components/modalNewChat/modal';
 
 export class ChatPageBase extends Block {
   constructor() {
