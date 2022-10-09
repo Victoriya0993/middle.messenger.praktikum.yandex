@@ -1,9 +1,9 @@
 import Block from '../../core/Block';
-import {Button} from '../Button';
+import {Button} from '../Button/button';
 import template from './modal.hbs';
 import * as styles from './styles.module.css';
 import store from '../../core/Store';
-import {Input} from '../Input';
+import {Input} from '../Input/input';
 import ChatController from '../../controllers/ChatController';
 
 interface ModalProps {

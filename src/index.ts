@@ -6,6 +6,8 @@ import AuthController from './controllers/AuthController';
 import {EditProfilePage} from './pages/EditProfile/datauser';
 import {PasswordPage} from './pages/EditProfile/password';
 import {ChatPage} from './pages/ChatsPage/chats';
+import {Error404Page} from './pages/404/404';
+import {Error500Page} from './pages/500/500';
 import store from './core/Store';
 import './index.css';
 
@@ -16,15 +18,19 @@ enum Routes {
   EditProfile = '/settings',
   Password = '/editpassword',
   Chats = '/messenger',
+  Error404 = '/404',
+  Error500 = '/500'
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
   Router.use(Routes.Index, LoginPage)
-    .use(Routes.Register, SignUp)
-    .use(Routes.Profile, ProfilePage)
-    .use(Routes.EditProfile, EditProfilePage)
-    .use(Routes.Password, PasswordPage)
-    .use(Routes.Chats, ChatPage);
+      .use(Routes.Register, SignUp)
+      .use(Routes.Profile, ProfilePage)
+      .use(Routes.EditProfile, EditProfilePage)
+      .use(Routes.Password, PasswordPage)
+      .use(Routes.Chats, ChatPage)
+      .use(Routes.Error404, Error404Page)
+      .use(Routes.Error500, Error500Page);
 
   let isProtectedRoute = true;
 

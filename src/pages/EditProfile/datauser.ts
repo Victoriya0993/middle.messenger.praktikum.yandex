@@ -3,13 +3,12 @@ import template from './datauser.hbs';
 import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
 import UserController from '../../controllers/UserController';
-import {Button} from '../../components/Button';
+import {Button} from '../../components/Button/button';
 import * as styles from './styles.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
-import {Icon} from '../../components/Icon';
-import {Input} from '../../components/Input';
-import router from '../../core/Router';
+import {Icon} from '../../components/Icon/icon';
+import {Input} from '../../components/Input/input';
 
 class EditProfileBase extends Block {
   init() {
@@ -83,8 +82,8 @@ class EditProfileBase extends Block {
 
   onSubmit() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const data = Object.fromEntries(values);
 
@@ -108,6 +107,6 @@ class EditProfileBase extends Block {
   }
 }
 
-const withUser = withStore(state => ({...state.user, styles}));
+const withUser = withStore((state) => ({...state.user, styles}));
 
 export const EditProfilePage = withUser(EditProfileBase);

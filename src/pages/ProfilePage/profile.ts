@@ -2,11 +2,11 @@ import Block from '../../core/Block';
 import template from './profile.hbs';
 import store, {withStore} from '../../core/Store';
 import AuthController from '../../controllers/AuthController';
-import {Button} from '../../components/Button';
+import {Button} from '../../components/Button/button';
 import * as styles from './profile.module.css';
 import avatar from '../../static/icons/avatar.png';
 import back from '../../static/icons/back.svg';
-import {Icon} from '../../components/Icon';
+import {Icon} from '../../components/Icon/icon';
 import router from '../../core/Router';
 
 class ProfilePageBase extends Block {
@@ -66,6 +66,6 @@ class ProfilePageBase extends Block {
   }
 }
 
-const withUser = withStore(state => ({...state.user, styles}));
+const withUser = withStore((state) => ({...state.user, styles}));
 
 export const ProfilePage = withUser(ProfilePageBase);

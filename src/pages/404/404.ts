@@ -1,17 +1,21 @@
 import Block from '../../core/Block';
-
-import './404.css';
+import * as styles from './404.module.css';
+import template from './404.hbs';
+import {Link} from '../../components/Link/link';
 
 export class Error404Page extends Block {
+  constructor() {
+    super({});
+  }
+
+  init() {
+    this.children.link = new Link({
+      label: 'Назад к чатам',
+      to: '/messenger',
+    });
+  }
+
   render() {
-    return `
-    <main class="layout">
-    <div class="error">
-        {{{ Title className="error_name" text="404"}}}
-        {{{ Title className="error_comment" text="Не туда попали"}}}
-        {{{ Button className="block_button button__default" text="Назад к чатам"}}}
-    </div>
-    </main>
-    `;
+    return this.compile(template, {...this.props, styles});
   }
 }

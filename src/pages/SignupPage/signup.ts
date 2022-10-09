@@ -3,10 +3,10 @@ import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import AuthController from '../../controllers/AuthController';
 import * as styles from './signup.module.css';
-import {Input} from '../../components/Input';
-import {Button} from '../../components/Button';
+import {Input} from '../../components/Input/input';
+import {Button} from '../../components/Button/button';
 import template from './signup.hbs';
-import {Link} from '../../components/Link';
+import {Link} from '../../components/Link/link';
 import {SignupData} from '../../api/AuthAPI';
 import store, {withStore} from '../../core/Store';
 
@@ -104,8 +104,8 @@ export class SignUpBase extends Block {
 
   onSubmit() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const registationData = Object.fromEntries(values);
 
@@ -130,8 +130,8 @@ export class SignUpBase extends Block {
 
   blur() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const registationData = Object.fromEntries(values);
 
@@ -155,6 +155,6 @@ export class SignUpBase extends Block {
   }
 }
 
-const withUser = withStore(state => ({...state.errors, styles}));
+const withUser = withStore((state) => ({...state.errors, styles}));
 
 export const SignUp = withUser(SignUpBase);

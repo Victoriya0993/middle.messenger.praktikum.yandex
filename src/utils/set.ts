@@ -10,9 +10,9 @@ function set(object: Indexed | unknown, path: string, value: unknown): Indexed |
   }
 
   const result = path.split('.').reduceRight<Indexed>(
-    (acc, key) => ({
-      [key]: acc,
-    }),
+      (acc, key) => ({
+        [key]: acc,
+      }),
     value as any,
   );
   return merge(object as Indexed, result);

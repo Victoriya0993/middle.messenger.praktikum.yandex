@@ -2,10 +2,10 @@
 import Block from '../../core/Block';
 import AuthController from '../../controllers/AuthController';
 import * as styles from './login.module.css';
-import {Input} from '../../components/Input';
-import {Button} from '../../components/Button';
+import {Input} from '../../components/Input/input';
+import {Button} from '../../components/Button/button';
 import template from './login.hbs';
-import {Link} from '../../components/Link';
+import {Link} from '../../components/Link/link';
 import {SignupData} from '../../api/AuthAPI';
 
 export class LoginPage extends Block {
@@ -43,8 +43,8 @@ export class LoginPage extends Block {
   }
   onSubmit() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const data = Object.fromEntries(values);
     console.log(data as SignupData);

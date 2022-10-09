@@ -1,13 +1,13 @@
 import Block from '../../core/Block';
 import router from '../../core/Router';
-import {Button} from '../../components/Button';
+import {Button} from '../../components/Button/button';
 import template from './chats.hbs';
 import ChatController from '../../controllers/ChatController';
-import {ChatsList} from '../../components/ChatsList';
-import {Messenger} from '../../components/Messenger';
+import {ChatsList} from '../../components/ChatsList/chatlist';
+import {Messenger} from '../../components/Messenger/messeger';
 import * as styles from './chats.module.css';
 import store, {withStore} from '../../core/Store';
-import {Modal} from '../../components/ModalNewChat';
+import {Modal} from '../../components/ModalNewChat/modal';
 
 export class ChatPageBase extends Block {
   constructor() {
@@ -57,6 +57,6 @@ export class ChatPageBase extends Block {
   }
 }
 
-const withChats = withStore(state => ({...state, styles}));
+const withChats = withStore((state) => ({...state, styles}));
 
 export const ChatPage = withChats(ChatPageBase);

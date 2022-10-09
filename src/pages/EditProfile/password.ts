@@ -1,11 +1,11 @@
 import Block from '../../core/Block';
 import {validation} from '../../core/validation';
 import * as styles from './styles.module.css';
-import {Input} from '../../components/Input';
-import {Button} from '../../components/Button';
+import {Input} from '../../components/Input/input';
+import {Button} from '../../components/Button/button';
 import template from './password.hbs';
 import store, {withStore} from '../../core/Store';
-import {Link} from '../../components/Link';
+import {Link} from '../../components/Link/link';
 import UserController from '../../controllers/UserController';
 
 let errors;
@@ -59,8 +59,8 @@ export class PasswordPageBase extends Block {
 
   onSubmit() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const data = Object.fromEntries(values);
     console.log(data);
@@ -89,8 +89,8 @@ export class PasswordPageBase extends Block {
 
   blur() {
     const values = Object.values(this.children)
-      .filter(child => child instanceof Input)
-      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
+        .filter((child) => child instanceof Input)
+        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
 
     const registationData = Object.fromEntries(values);
 
@@ -114,6 +114,6 @@ export class PasswordPageBase extends Block {
   }
 }
 
-const withUser = withStore(state => ({...state.errors, styles}));
+const withUser = withStore((state) => ({...state.errors, styles}));
 
 export const PasswordPage = withUser(PasswordPageBase);

@@ -14,13 +14,13 @@ export class ChatController {
     try {
       const chats = await this.api.read();
 
-      chats.map(async chat => {
+      chats.map(async (chat) => {
         const token = await this.getToken(chat.id);
 
         await MessagesController.connect(chat.id, token);
       });
 
-      chats.forEach(chat => {
+      chats.forEach((chat) => {
         if (chat.last_message) {
           chat.last_message.time = chat.last_message.time.split('T')[1].slice(0, 5);
         }
