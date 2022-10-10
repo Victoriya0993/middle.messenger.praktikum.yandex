@@ -3,6 +3,6 @@
   "resolvers": ["...", "parcel-resolver-tspaths"],
   "transformers": {
     "*.hbs": ["@anikin/parcel-transformer-handlebars-precompile"],
-    "*.{ts,tsx}": ["@parcel/transformer-typescript-tsc"]
+    "*.{ts}": ["@parcel/transformer-typescript-tsc"]
   }
 }
