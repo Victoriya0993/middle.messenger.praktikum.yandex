@@ -1,16 +1,23 @@
-import Block from '../../core/Block';
+import Block from 'core/Block';
 import template from './profile.hbs';
-import store, {withStore} from '../../core/Store';
-import AuthController from '../../controllers/AuthController';
-import {Button} from '../../components/Button_/button';
-import * as styles from '../../styles/styles.module.css';
-import avatar from '../../static/icons/avatar.png';
-import back from '../../static/icons/back.svg';
-import {Icon} from '../../components/Icon/icon';
-import router from '../../core/Router';
+import store, {withStore} from 'core/Store';
+import AuthController from 'controllers/AuthController';
+import {Button} from 'components/Button/button';
+import * as styles from 'styles/styles.module.css';
+import avatar from 'static/icons/avatar.png';
+import back from 'static/icons/back.svg';
+import {Icon} from 'components/Icon/icon';
+import router from 'core/Router';
+import {ModalAvatar} from 'components/ModalAvatar/modal';
 
 class ProfilePageBase extends Block {
   init() {
+    let avatarUser = avatar;
+
+    if (store.getState().user) {
+      avatarUser = `https://ya-praktikum.tech/api/v2/resources${store.getState().user.avatar}`;
+    }
+
     this.children.back_icon = new Icon({
       url: back,
       class: styles.back_icon,
@@ -22,10 +29,11 @@ class ProfilePageBase extends Block {
     });
 
     this.children.avatar = new Icon({
-      url: `https://ya-praktikum.tech/api/v2/resources${store.getState().user.avatar}` || avatar,
+      url: avatarUser,
       class: styles.avatar,
       events: {
         click: () => {
+          store.set('flagNewAvatar', true);
         },
       },
     });
@@ -59,6 +67,10 @@ class ProfilePageBase extends Block {
         },
       },
     });
+
+    this.children.modal = new ModalAvatar({
+      flagNewAvatar: false,
+    });
   }
 
   render() {
@@ -66,6 +78,6 @@ class ProfilePageBase extends Block {
   }
 }
 
-const withUser = withStore((state) => ({...state.user, styles}));
+const withUser = withStore(state => ({...state.user, flagNewAvatar: state.flagNewAvatar, styles}));
 
 export const ProfilePage = withUser(ProfilePageBase);

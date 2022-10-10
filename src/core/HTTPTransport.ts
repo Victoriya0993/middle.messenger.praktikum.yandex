@@ -9,6 +9,7 @@ export enum Method {
 type Options = {
   method: Method;
   data?: any;
+  type?: string;
 };
 
 export class HTTPTransport {
@@ -30,10 +31,11 @@ export class HTTPTransport {
     });
   }
 
-  public put<Response = void>(path: string, data: unknown): Promise<Response> {
+  public put<Response = void>(path: string, data: unknown, type?: string): Promise<Response> {
     return this.request<Response>(this.endpoint + path, {
       method: Method.Put,
       data,
+      type,
     });
   }
 
@@ -52,7 +54,7 @@ export class HTTPTransport {
   }
 
   private request<Response>(url: string, options: Options = {method: Method.Get}): Promise<Response> {
-    const {method, data} = options;
+    const {method, data, type} = options;
 
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
@@ -74,15 +76,16 @@ export class HTTPTransport {
 
       xhr.withCredentials = true;
       xhr.responseType = 'json';
+      xhr.setRequestHeader('mode', 'cors');
 
       if (method === Method.Get || !data) {
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send();
-      } else if (method === Method.Put && data === 'img') {
-        // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+      } else if (method === Method.Put && data && type === 'img') {
+        const formData = new FormData();
+        formData.append('avatar', data);
 
-        const myUserForm = document.getElementById('myUserForm') as HTMLFormElement;
-        if (myUserForm) xhr.send(new FormData(myUserForm));
+        xhr.send(formData);
       } else {
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data));

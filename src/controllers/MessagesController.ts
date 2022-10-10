@@ -1,5 +1,5 @@
-import WSTransport, {WSTransportEvents} from '../core/WSTransport';
-import store from '../core/Store';
+import WSTransport, {WSTransportEvents} from 'core/WSTransport';
+import store from 'core/Store';
 
 export interface Message {
   chat_id: number;
@@ -62,7 +62,7 @@ class MessagesController {
   }
 
   closeAll() {
-    Array.from(this.sockets.values()).forEach((socket) => socket.close());
+    Array.from(this.sockets.values()).forEach(socket => socket.close());
   }
 
   private onMessage(id: number, messages: Message | Message[]) {
@@ -86,7 +86,7 @@ class MessagesController {
   }
 
   private subscribe(transport: WSTransport, id: number) {
-    transport.on(WSTransportEvents.Message, (message) => this.onMessage(id, message));
+    transport.on(WSTransportEvents.Message, message => this.onMessage(id, message));
     transport.on(WSTransportEvents.Close, () => this.onClose(id));
   }
 }

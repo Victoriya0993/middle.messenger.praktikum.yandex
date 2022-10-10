@@ -1,6 +1,6 @@
-import API from '../api/ChatAPI';
-import {ChatsAPI} from '../api/ChatAPI';
-import store from '../core/Store';
+import API from 'api/ChatAPI';
+import {ChatsAPI} from 'api/ChatAPI';
+import store from 'core/Store';
 import MessagesController from './MessagesController';
 
 export class ChatController {
@@ -14,13 +14,13 @@ export class ChatController {
     try {
       const chats = await this.api.read();
 
-      chats.map(async (chat) => {
+      chats.map(async chat => {
         const token = await this.getToken(chat.id);
 
         await MessagesController.connect(chat.id, token);
       });
 
-      chats.forEach((chat) => {
+      chats.forEach(chat => {
         if (chat.last_message) {
           chat.last_message.time = chat.last_message.time.split('T')[1].slice(0, 5);
         }
@@ -32,14 +32,12 @@ export class ChatController {
     }
   }
 
-  async createChat(title: string) {
+  async createChat(nameChat: string, idUser: number) {
     try {
-      const response = await this.api.create(title);
+      const response = await this.api.create(nameChat);
       await this.getChats();
 
-      if (store.getState().user.id != 96685) {
-        if (response.id) this.addUserToChat(response.id, 96685);
-      }
+      if (response.id) this.addUserToChat(response.id, idUser);
     } catch (e: any) {
       console.error(e);
     }

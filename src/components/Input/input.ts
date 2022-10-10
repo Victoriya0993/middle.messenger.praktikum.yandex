@@ -1,8 +1,9 @@
-import Block from '../../core/Block';
+import Block from 'core/Block';
 import template from './input.hbs';
 
 interface InputProps {
   name: string;
+  id?: string;
   class?: string;
   error?: string;
   type: string;

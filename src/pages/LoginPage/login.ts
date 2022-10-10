@@ -1,12 +1,11 @@
-// import { LoginRequest } from '../../api_/apiLogin_';
-import Block from '../../core/Block';
-import AuthController from '../../controllers/AuthController';
-import {Input} from '../../components/Input_/input';
-import {Button} from '../../components/Button_/button';
+import Block from 'core/Block';
+import AuthController from 'controllers/AuthController';
+import {Input} from 'components/Input/input';
+import {Button} from 'components/Button/button';
 import template from './login.hbs';
-import {Link} from '../../components/Link/link';
-import {SignupData} from '../../api/AuthAPI';
-import * as styles from '../../styles/styles.module.css';
+import {Link} from 'components/Link/link';
+import {SignupData} from 'api/AuthAPI';
+import * as styles from 'styles/styles.module.css';
 
 export class LoginPage extends Block {
   constructor() {
@@ -43,8 +42,8 @@ export class LoginPage extends Block {
   }
   onSubmit() {
     const values = Object.values(this.children)
-        .filter((child) => child instanceof Input)
-        .map((child) => [(child as Input).getName(), (child as Input).getValue()]);
+      .filter(child => child instanceof Input)
+      .map(child => [(child as Input).getName(), (child as Input).getValue()]);
 
     const data = Object.fromEntries(values);
     console.log(data as SignupData);

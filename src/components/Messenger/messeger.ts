@@ -1,11 +1,11 @@
-import Block from '../../core/Block';
+import Block from 'core/Block';
 import template from './messenger.hbs';
-import {Message} from '../Message/massage';
-import {Input} from '../Input_/input';
-import {Button} from '../Button_/button';
-import MessagesController, {Message as MessageInfo} from '../../controllers/MessagesController';
-import {withStore} from '../../core/Store';
-import * as styles from '../../styles/styles.module.css';
+import {Message} from 'components/Message/massage';
+import {Input} from 'components/Input/input';
+import {Button} from 'components/Button/button';
+import MessagesController, {Message as MessageInfo} from 'controllers/MessagesController';
+import {withStore} from 'core/Store';
+import * as styles from 'styles/styles.module.css';
 
 interface MessengerProps {
   selectedChat: number | undefined;
@@ -51,7 +51,7 @@ class MessengerBase extends Block<MessengerProps> {
   }
 
   private createMessages(props: MessengerProps) {
-    return props.messages.map((data) => {
+    return props.messages.map(data => {
       return new Message({...data, isMine: props.userId === data.user_id});
     });
   }
@@ -61,7 +61,7 @@ class MessengerBase extends Block<MessengerProps> {
   }
 }
 
-const withSelectedChatMessages = withStore((state) => {
+const withSelectedChatMessages = withStore(state => {
   const selectedChatId = state.selectedChat;
 
   if (!selectedChatId) {

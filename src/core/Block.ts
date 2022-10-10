@@ -1,4 +1,4 @@
-import {EventBus} from './EventBus';
+import {EventBus} from 'core/EventBus';
 import {nanoid} from 'nanoid';
 
 // Нельзя создавать экземпляр данного класса

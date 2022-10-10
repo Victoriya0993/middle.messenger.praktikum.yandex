@@ -133,6 +133,7 @@
 }
 
 .card_field_name {
+  padding-left: 5px;
   text-align: left;
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -155,6 +156,8 @@
   margin: auto;
   width: 130px;
   height: 130px;
+  object-fit: cover;
+  border-radius: 100px;
 }
 
 .card_footer {
@@ -410,7 +413,8 @@
 .content_messenger_input {
   flex: 1;
   margin: 0 5px;
-  padding: 10px;
+  padding: 5px;
+  padding-left: 10px;
   height: 32px;
   background-color: var(--second-color-chat);
   border: none;
@@ -611,7 +615,7 @@
 
 .block_title_modal {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -632,4 +636,20 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.button__close {
+  width: 100%;
+  text-align: right;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background: var(--second-color);
+  color: var(--secondary-text-color);
+  font-size: 24px;
+  padding-right: 20px;
+  padding-top: 10px;
+  border-radius: 12px;
 }

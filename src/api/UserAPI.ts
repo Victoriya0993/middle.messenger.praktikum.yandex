@@ -1,4 +1,4 @@
-import BaseAPI from './BaseAPI';
+import BaseAPI from 'api/BaseAPI';
 
 export class UserAPI extends BaseAPI {
   constructor() {
@@ -13,8 +13,8 @@ export class UserAPI extends BaseAPI {
     return this.http.put('/password', data);
   }
 
-  update_avatar() {
-    return this.http.put('/profile/avatar', 'img');
+  update_avatar(file: any) {
+    return this.http.put('/profile/avatar', file, 'img');
   }
 
   create = undefined;

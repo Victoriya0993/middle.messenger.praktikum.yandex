@@ -1,7 +1,7 @@
-import Block from '../../core/Block';
+import Block from 'core/Block';
 import template from './500.hbs';
-import {Link} from '../../components/Link/link';
-import * as styles from '../../styles/styles.module.css';
+import {Link} from 'components/Link/link';
+import * as styles from 'styles/styles.module.css';
 
 export class Error500Page extends Block {
   constructor() {

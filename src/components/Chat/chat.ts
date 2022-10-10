@@ -1,9 +1,9 @@
-import {ChatInfo} from '../../api/ChatAPI';
-import Block from '../../core/Block';
-import {withStore} from '../../core/Store';
+import {ChatInfo} from 'api/ChatAPI';
+import Block from 'core/Block';
+import {withStore} from 'core/Store';
 import template from './chat.hbs';
-import * as styles from '../../styles/styles.module.css';
-import img from '../../static/icons/icon.png';
+import * as styles from 'styles/styles.module.css';
+import img from 'static/icons/icon.png';
 
 interface ChatProps {
   img: string;
@@ -34,7 +34,7 @@ class ChatBase extends Block<ChatProps> {
   }
 }
 
-export const withSelectedChat = withStore((state) => ({
+export const withSelectedChat = withStore(state => ({
   selectedChat: (state.chats || []).find(({id}) => id === state.selectedChat),
 }));
 

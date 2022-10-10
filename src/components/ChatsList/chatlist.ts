@@ -1,9 +1,9 @@
-import Block from '../../core/Block';
+import Block from 'core/Block';
 import template from './chatsList.hbs';
-import {Chat} from '../Chat_/chat';
-import {withStore} from '../../core/Store';
-import {ChatInfo} from '../../api/ChatAPI';
-import ChatController from '../../controllers/ChatController';
+import {Chat} from 'components/Chat/chat';
+import {withStore} from 'core/Store';
+import {ChatInfo} from 'api/ChatAPI';
+import ChatController from 'controllers/ChatController';
 
 interface ChatsListProps {
   chats: ChatInfo[];
@@ -26,7 +26,7 @@ class ChatsListBase extends Block<ChatsListProps> {
   }
 
   private createChats(props: ChatsListProps) {
-    return props.chats.map((data) => {
+    return props.chats.map(data => {
       return new Chat({
         ...data,
         events: {
@@ -43,6 +43,6 @@ class ChatsListBase extends Block<ChatsListProps> {
   }
 }
 
-const withChats = withStore((state) => ({chats: [...(state.chats || [])]}));
+const withChats = withStore(state => ({chats: [...(state.chats || [])]}));
 
 export const ChatsList = withChats(ChatsListBase);

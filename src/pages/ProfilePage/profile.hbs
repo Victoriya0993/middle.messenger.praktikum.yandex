@@ -1,8 +1,10 @@
 <main class="{{styles.layout}}">
+     {{#if flagNewAvatar}}
+        {{{modal}}}
+    {{/if}}
     <div class="{{styles.back}}"> {{{back_icon}}} </div>
        <div class="{{styles.content_card}}">
           {{{avatar}}}
-          {{!-- <img src="{{avatar}}" class="{{styles.avatar}}" /> --}}
            <div class="{{styles.card_title}}"> {{first_name}} </div>
             <div class="{{styles.card_field}}">
                 <label class="{{styles.card_field_name}}">Почта</label>
@@ -24,8 +26,10 @@
                 <label class="{{styles.card_field_name}}">Телефон</label>
                 <div class="{{styles.card_field_value}}">{{phone}}</div>
            </div>    
+           <div class="{{styles.card_footer}}">
            {{{button_change_data}}}
            {{{button_change_password}}}
            {{{button_exit}}}
+           </div>
     </div>
 </main>
