@@ -18,6 +18,7 @@
     "lodash.isequal": "~4.5.0",
     "mocha": "~10.0.0",
     "nanoid": "~4.0.0",
+    "pages": "^0.0.16",
     "parcel": "~2.7.0",
     "parcel-resolver-tspaths": "~0.0.9"
   },
