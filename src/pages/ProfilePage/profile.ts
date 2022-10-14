@@ -14,7 +14,7 @@ class ProfilePageBase extends Block {
   init() {
     let avatarUser = avatar;
 
-    if (store.getState().user) {
+    if (store.getState().user && store.getState().user.avatar) {
       avatarUser = `https://ya-praktikum.tech/api/v2/resources${store.getState().user.avatar}`;
     }
 
