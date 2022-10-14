@@ -1,7 +1,7 @@
 import Block from 'core/Block';
 import {validation} from 'core/validation';
 import AuthController from 'controllers/AuthController';
-import * as styles from 'styles/styles.module.css';
+import  styles from 'styles/styles.module.css';
 import {Input} from 'components/Input/input';
 import {Button} from 'components/Button/button';
 import template from './signup.hbs';
@@ -87,7 +87,7 @@ export class SignUpBase extends Block {
       },
     });
 
-    this.children.signup = new Button({
+    this.children.signup_button = new Button({
       label: 'Зарегистрироваться',
       class: `${styles.block_button} ${styles.button__active} `,
       events: {
@@ -95,7 +95,7 @@ export class SignUpBase extends Block {
       },
     });
 
-    this.children.signin = new Link({
+    this.children.signin_button = new Link({
       label: 'Войти',
       to: '/',
     });

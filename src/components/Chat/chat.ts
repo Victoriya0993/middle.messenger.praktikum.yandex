@@ -2,7 +2,7 @@ import {ChatInfo} from 'api/ChatAPI';
 import Block from 'core/Block';
 import {withStore} from 'core/Store';
 import template from './chat.hbs';
-import * as styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 import img from 'static/icons/icon.png';
 
 interface ChatProps {

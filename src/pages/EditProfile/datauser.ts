@@ -8,7 +8,7 @@ import avatar from 'static/icons/avatar.png';
 import back from 'static/icons/back.svg';
 import {Icon} from 'components/Icon/icon';
 import {Input} from 'components/Input/input';
-import * as styles from 'styles/styles.module.css';
+import  styles from 'styles/styles.module.css';
 
 class EditProfileBase extends Block {
   init() {

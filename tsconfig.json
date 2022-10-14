@@ -3,7 +3,7 @@
       "outDir": "dist",
       "target": "es6",
       "declaration": false,
-      "module": "commonjs",
+      "module": "esnext",
       "resolveJsonModule": true,
       "sourceMap": true,
       "noImplicitAny": true,
@@ -27,5 +27,5 @@
         "hocs/*": ["hocs/*"],
       }
   },
-  "include": ["src", "index.d.ts"]
+  "include": ["src", "**/*.d.ts"]
 }
