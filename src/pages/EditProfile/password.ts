@@ -6,7 +6,7 @@ import template from './password.hbs';
 import store, {withStore} from 'core/Store';
 import {Link} from 'components/Link/link';
 import UserController from 'controllers/UserController';
-import * as styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 
 let errors;
 

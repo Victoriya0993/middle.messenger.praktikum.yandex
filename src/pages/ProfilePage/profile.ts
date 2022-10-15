@@ -3,7 +3,7 @@ import template from './profile.hbs';
 import store, {withStore} from 'core/Store';
 import AuthController from 'controllers/AuthController';
 import {Button} from 'components/Button/button';
-import * as styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 import avatar from 'static/icons/avatar.png';
 import back from 'static/icons/back.svg';
 import {Icon} from 'components/Icon/icon';
@@ -14,7 +14,7 @@ class ProfilePageBase extends Block {
   init() {
     let avatarUser = avatar;
 
-    if (store.getState().user) {
+    if (store.getState().user && store.getState().user.avatar) {
       avatarUser = `https://ya-praktikum.tech/api/v2/resources${store.getState().user.avatar}`;
     }
 

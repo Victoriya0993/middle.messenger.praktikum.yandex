@@ -5,7 +5,7 @@ import {Button} from 'components/Button/button';
 import template from './login.hbs';
 import {Link} from 'components/Link/link';
 import {SignupData} from 'api/AuthAPI';
-import * as styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 
 export class LoginPage extends Block {
   constructor() {
@@ -13,7 +13,7 @@ export class LoginPage extends Block {
   }
 
   init() {
-    this.children.login = new Input({
+    this.children.login_input = new Input({
       name: 'login',
       class: styles.block_input,
       type: 'text',

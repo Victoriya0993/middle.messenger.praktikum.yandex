@@ -14,7 +14,6 @@ export class UserController {
     try {
       await this.api.update_avatar(file);
       await AuthController.fetchUser();
-      
     } catch (e: any) {
       console.error(e);
     }
