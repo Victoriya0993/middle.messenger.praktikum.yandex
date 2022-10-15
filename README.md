@@ -1,4 +1,4 @@
-### Чат на heroku
+### Чат размещен на heroku
 https://chat-vicky-r.herokuapp.com/
 
 ### Стандартный UI: 
@@ -11,4 +11,3 @@ npm start
 
 ### Приложение запустится на порту 3000
 http://localhost:3000/
-
