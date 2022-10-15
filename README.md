@@ -1,5 +1,5 @@
 ### Ссылка на текущий PR
-https://github.com/Victoriya0993/middle.messenger.praktikum.yandex/pull/21
+https://github.com/Victoriya0993/middle.messenger.praktikum.yandex/pull/27
 
 ### Чат на heroku
 https://chat-vicky-r.herokuapp.com/
