@@ -1,0 +1,20 @@
+<main class={{styles.layout}}>
+    {{#if flagNewChat}}
+        {{{modal}}}
+    {{/if}}
+    <div class={{styles.chats_navigation}}>
+        <div class={{styles.navigation_profile}}> 
+            {{{newchat}}}
+            {{{profile}}}
+        </div>
+        <div class={{styles.navigation_search}}>
+            <div class={{styles.search_text}}>Поиск</div>
+        </div>
+         <div class={{styles.navigation_list}}>
+            {{{chatsList}}}
+         </div>
+    </div>
+    <div class={{styles.chats_content}}>
+        {{{messenger}}}
+    </div>
+</main>

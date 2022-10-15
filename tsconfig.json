@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "outDir": "dist",
-      "target": "es2017",
+      "target": "es6",
       "declaration": false,
       "module": "commonjs",
       "resolveJsonModule": true,
@@ -11,7 +11,21 @@
       "noUnusedParameters": true,
       "strictNullChecks": true,
       "esModuleInterop": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+
+      "baseUrl": "./src",
+      "paths": {
+        "api/*": ["api/*"],
+        "components/*": ["components/*"],
+        "controllers/*": ["controllers/*"],
+        "core/*": ["core/*"],
+        "pages/*": ["pages/*"],
+        "styles/*": ["styles/*"],
+        "types/*": ["types/*"],
+        "static/*": ["static/*"],
+        "utils/*": ["utils/*"],
+        "hocs/*": ["hocs/*"],
+      }
   },
   "include": ["src", "index.d.ts"]
 }

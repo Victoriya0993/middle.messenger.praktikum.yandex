@@ -1,0 +1,6 @@
+/build
+/dist
+/node_modules 
+/.parcel-cache
+/.github
+/src/core

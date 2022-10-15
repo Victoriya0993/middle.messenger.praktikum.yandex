@@ -1,23 +1,23 @@
 [
   {
-    "name": "Сергей",
+    "title": "Сергей",
     "new_message": "Изображение",
     "img": "",
     "time": "10:49",
-    "count_message": 2
+    "unread_count": 2
   },
   {
-    "name": "Маша",
+    "title": "Маша",
     "new_message": "Привет! Как дела? ",
     "img": "",
     "time": "12:49",
-    "count_message": 1
+    "unread_count": 1
   },
   {
-    "name": "Марина",
+    "title": "Марина",
     "new_message": "Хорошо, до завтра)",
     "img": "",
     "time": "21:02",
-    "count_message": "0"
+    "unread_count": "0"
   }
 ]

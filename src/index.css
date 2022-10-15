@@ -12,3 +12,15 @@ body {
   display: flex;
   justify-content: center;
 }
+
+:root {
+  --main-bg-color: #fff;
+  --primary-color: #3369f3;
+  --attention-color: #f00;
+  --second-color: #fff;
+  --main-text-color: #1e1e1e;
+  --secondary-text-color: #999;
+  --border-color: #eaeaea;
+  --second-color-chat: #efefef;
+  --primary-text-color: #1e1e1e;
+}
