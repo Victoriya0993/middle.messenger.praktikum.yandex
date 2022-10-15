@@ -3,7 +3,7 @@ import template from './profile.hbs';
 import store, {withStore} from 'core/Store';
 import AuthController from 'controllers/AuthController';
 import {Button} from 'components/Button/button';
-import  styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 import avatar from 'static/icons/avatar.png';
 import back from 'static/icons/back.svg';
 import {Icon} from 'components/Icon/icon';

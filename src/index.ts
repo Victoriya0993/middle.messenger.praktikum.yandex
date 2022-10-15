@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   try {
     await AuthController.fetchUser();
-    
+
     Router.start();
 
     if (!isProtectedRoute) {

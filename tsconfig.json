@@ -1,31 +1,41 @@
 {
-  "compilerOptions": {
-      "outDir": "dist",
-      "target": "es6",
-      "declaration": false,
-      "module": "esnext",
-      "resolveJsonModule": true,
-      "sourceMap": true,
-      "noImplicitAny": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "strictNullChecks": true,
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-
-      "baseUrl": "./src",
-      "paths": {
-        "api/*": ["api/*"],
-        "components/*": ["components/*"],
-        "controllers/*": ["controllers/*"],
-        "core/*": ["core/*"],
-        "pages/*": ["pages/*"],
-        "styles/*": ["styles/*"],
-        "types/*": ["types/*"],
-        "static/*": ["static/*"],
-        "utils/*": ["utils/*"],
-        "hocs/*": ["hocs/*"],
-      }
+  "ts-node": {
+    "files": true
   },
-  "include": ["src", "**/*.d.ts"]
+  "compilerOptions": {    
+    "outDir": "dist",
+    "declaration": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    
+    "baseUrl": "./src",
+    "paths": {
+      "api/*": ["api/*"],
+      "components/*": ["components/*"],
+      "controllers/*": ["controllers/*"],
+      "core/*": ["core/*"],
+      "pages/*": ["pages/*"],
+      "styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "static/*": ["static/*"],
+      "utils/*": ["utils/*"],
+      "hocs/*": ["hocs/*"],
+    }
+  }
 }

@@ -5,7 +5,7 @@ import {Button} from 'components/Button/button';
 import template from './login.hbs';
 import {Link} from 'components/Link/link';
 import {SignupData} from 'api/AuthAPI';
-import  styles from 'styles/styles.module.css';
+import styles from 'styles/styles.module.css';
 
 export class LoginPage extends Block {
   constructor() {
